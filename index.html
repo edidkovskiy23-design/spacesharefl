@@ -219,7 +219,7 @@ async function loadListings() {
     const res = await fetch(`${SUPABASE_URL}/listings?select=*&order=created_at.desc&limit=6`, {
       headers: {
         apikey: SUPABASE_ANON_KEY,
-        Authorization: Bearer ${SUPABASE_ANON_KEY}
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`
       }
     });
 
