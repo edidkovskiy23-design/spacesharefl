@@ -223,18 +223,6 @@
     </div>
   </footer>
 
-  <script>
-    function fakeSubmit(formId,msgId,text){
-      var form=document.getElementById(formId),msg=document.getElementById(msgId);
-      if(!form)return;
-      form.addEventListener("submit",function(e){
-        e.preventDefault();
-        msg.textContent=text;
-        form.reset();
-      });
-    }
-    fakeSubmit("quickForm","quickMsg","Request received. Next step: connect this form to email or CRM.");
-    fakeSubmit("leadForm","leadMsg","Request received. Next step: connect this form to email or CRM.");
-  </script>
+
 </body>
 </html>
