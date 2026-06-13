@@ -207,11 +207,53 @@
 <section class="wrap"><div class="cta"><div><h2>Ready to find your space?</h2><p>Join local boaters, RV owners and property owners across South Florida.</p></div><a class="btn alt" href="#findForm">Find Storage Near Me</a></div></section>
 
 <footer><div class="wrap foot"><div class="brand"><div class="logoMark">☀</div>SpaceShare<span>FL</span></div><div>© 2026 SpaceShareFL · Local storage made simple.</div></div></footer>
-
 <script>
-const SUPABASE_URL = "";
-const SUPABASE_ANON_KEY = "";
-const STRIPE_CHECKOUT_LINK = "";
+const SUPABASE_URL = "https://wtpmchmzsbaupvupyxuo.supabase.co/rest/v1";
+const SUPABASE_ANON_KEY = "sb_publishable_VRmjMIdNtTjzvU6Fm-rpSw_T_FQlSON";
+
+async function loadListings() {
+  const container = document.querySelector("#featuredSpots") || document.querySelector("#spots .spots");
+  if (!container) return;
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/listings?select=*&order=created_at.desc&limit=6`, {
+      headers: {
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: Bearer ${SUPABASE_ANON_KEY}
+      }
+    });
+
+    const listings = await res.json();
+
+    if (!Array.isArray(listings) || listings.length === 0) return;
+
+    container.innerHTML = listings.map(item => `
+      <article class="spot">
+        <div class="spotImg">
+          <span class="badge">${item.verified ? "Verified Owner" : "Recently Added"}</span>
+          🚤
+        </div>
+        <div class="spotBody">
+          <h3>${item.title || "Storage Space"}</h3>
+          <p>${item.description || "Local storage space for boat, jet ski, trailer, RV or extra parking."}</p>
+          <div class="chips">
+            <span class="chip">${item.city || "South Florida"}</span>
+            <span class="chip">${item.space_type || "Outdoor"}</span>
+            <span class="chip">Monthly</span>
+          </div>
+          <div class="price">Price confirmed before booking</div>
+          <a class="btn" href="#findForm">Reserve Spot</a>
+        </div>
+      </article>
+    `).join("");
+
+  } catch (error) {
+    console.log("Supabase listings error:", error);
+  }
+}
+
+loadListings();
 </script>
+
 </body>
 </html>
