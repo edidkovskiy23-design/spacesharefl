@@ -229,8 +229,7 @@ async function loadListings() {
 
     container.innerHTML = listings.map(item => `
       <article class="spot">
-      <div class="spotImg" style="background-image:url('${item.image_url}')">          <span class="badge">${item.verified ? "Verified Owner" : "Recently Added"}</span>
-          🚤
+      <div class="spotImg" style="background-image:url('${item.image_url}')">          🚤
         </div>
         <div class="spotBody">
           <h3>${item.title || "Storage Space"}</h3>
