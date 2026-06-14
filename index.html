@@ -1,73 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SpaceShareFL</title>
+
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#fff;font-family:Arial,sans-serif}
-.site{position:relative;width:100%;max-width:1320px;margin:0 auto}
+.site{position:relative;width:100%;max-width:1320px;margin:0 auto;background:#fff}
 .site img{width:100%;display:block}
-.hot{position:absolute;z-index:50;cursor:pointer;background:transparent;border:0}
+.hot{position:absolute;z-index:50;cursor:pointer;background:rgba(255,0,0,0);border:0}
 
-/* кнопки на картинке */
-.findNav{left:33%;top:2.7%;width:10%;height:2.5%}
-.listNav{left:44%;top:2.7%;width:12%;height:2.5%}
-.howNav{left:58%;top:2.7%;width:10%;height:2.5%}
-.aboutNav{left:70%;top:2.7%;width:9%;height:2.5%}
-.contactNav{left:80%;top:2.7%;width:8%;height:2.5%}
-.listTop{left:84%;top:1.7%;width:13%;height:4%}
+/* TOP NAV */
+.navFind{left:33%;top:2.7%;width:10%;height:2.5%}
+.navList{left:44%;top:2.7%;width:12%;height:2.5%}
+.navHow{left:57%;top:2.7%;width:11%;height:2.5%}
+.navAbout{left:69%;top:2.7%;width:10%;height:2.5%}
+.navContact{left:80%;top:2.7%;width:8%;height:2.5%}
+.topList{left:84%;top:1.7%;width:13%;height:4%}
 
-.findHero{left:3%;top:24.5%;width:20%;height:4%}
-.listHero{left:24%;top:24.5%;width:17%;height:4%}
+/* HERO BUTTONS */
+.heroFind{left:3%;top:24.5%;width:20%;height:4%}
+.heroList{left:24%;top:24.5%;width:17%;height:4%}
+
+/* TRUST BAR */
+.safeBlock{left:4%;top:32%;width:21%;height:7%}
+.flexBlock{left:25%;top:32%;width:21%;height:7%}
+.localBlock{left:47%;top:32%;width:21%;height:7%}
+.supportBlock{left:69%;top:32%;width:25%;height:7%}
+
+/* WHAT CAN YOU STORE */
+.boats{left:4%;top:43%;width:17%;height:13%}
+.jetski{left:23%;top:43%;width:17%;height:13%}
+.trailers{left:42%;top:43%;width:17%;height:13%}
+.rvs{left:61%;top:43%;width:17%;height:13%}
+.extra{left:80%;top:43%;width:17%;height:13%}
+
+/* LOCATIONS */
 .explore{left:6%;top:63.5%;width:13%;height:4%}
-.ownerBtn{left:44%;top:78%;width:17%;height:4%}
-.findBottom{left:73%;top:89%;width:21%;height:4%}
+.hollywood{left:31%;top:58.5%;width:12%;height:11%}
+.hallandale{left:44%;top:58.5%;width:12%;height:11%}
+.aventura{left:57%;top:58.5%;width:12%;height:11%}
+.fort{left:70%;top:58.5%;width:12%;height:11%}
+.miami{left:83%;top:58.5%;width:12%;height:11%}
+.arrow{left:94%;top:61%;width:5%;height:5%}
 
-/* формы */
+/* OWNER */
+.ownerPhoto{left:4%;top:73%;width:38%;height:12%}
+.ownerText{left:43%;top:72%;width:50%;height:15%}
+.ownerBtn{left:44%;top:78%;width:17%;height:4%}
+
+/* FOOTER CTA */
+.bottomFind{left:73%;top:89%;width:21%;height:4%}
+.footerNav1{left:31%;top:94.5%;width:9%;height:2%}
+.footerNav2{left:43%;top:94.5%;width:10%;height:2%}
+.footerNav3{left:55%;top:94.5%;width:10%;height:2%}
+.footerNav4{left:68%;top:94.5%;width:8%;height:2%}
+.footerContact{left:79%;top:94.5%;width:8%;height:2%}
+
+/* MODALS */
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:999;align-items:center;justify-content:center;padding:20px}
 .modal.active{display:flex}
 .box{background:#fff;width:100%;max-width:520px;border-radius:24px;padding:26px;box-shadow:0 20px 60px #0008}
 .box h2{margin:0 0 12px;color:#061b36}
+.box p{color:#607482;margin:0 0 15px}
 input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}
 textarea{min-height:90px}
 .btn{width:100%;border:0;background:#18b957;color:#fff;border-radius:14px;padding:15px;font-weight:800;font-size:16px;margin-top:8px}
 .close{background:#eee;color:#111}
 </style>
 </head>
+
 <body>
 
 <div class="site">
-  <img src="IMG_8297.png">
+  <img src="IMG_8297.png" alt="SpaceShareFL">
 
-  <button class="hot findNav" onclick="openForm('find')"></button>
-  <button class="hot listNav" onclick="openForm('owner')"></button>
-  <button class="hot howNav" onclick="scrollToForms()"></button>
-  <button class="hot aboutNav" onclick="alert('SpaceShareFL helps people in South Florida find secure storage for boats, jet skis, trailers and RVs.')"></button>
-  <button class="hot contactNav" onclick="openForm('contact')"></button>
-  <button class="hot listTop" onclick="openForm('owner')"></button>
+  <button class="hot navFind" onclick="openForm('find')"></button>
+  <button class="hot navList" onclick="openForm('owner')"></button>
+  <button class="hot navHow" onclick="openInfo('how')"></button>
+  <button class="hot navAbout" onclick="openInfo('about')"></button>
+  <button class="hot navContact" onclick="openForm('contact')"></button>
+  <button class="hot topList" onclick="openForm('owner')"></button>
 
-  <button class="hot findHero" onclick="openForm('find')"></button>
-  <button class="hot listHero" onclick="openForm('owner')"></button>
+  <button class="hot heroFind" onclick="openForm('find')"></button>
+  <button class="hot heroList" onclick="openForm('owner')"></button>
+
+  <button class="hot safeBlock" onclick="openInfo('safe')"></button>
+  <button class="hot flexBlock" onclick="openInfo('flex')"></button>
+  <button class="hot localBlock" onclick="openInfo('local')"></button>
+  <button class="hot supportBlock" onclick="openForm('contact')"></button>
+
+  <button class="hot boats" onclick="openStorage('Boat')"></button>
+  <button class="hot jetski" onclick="openStorage('Jet Ski')"></button>
+  <button class="hot trailers" onclick="openStorage('Trailer')"></button>
+  <button class="hot rvs" onclick="openStorage('RV')"></button>
+  <button class="hot extra" onclick="openStorage('Extra Space')"></button>
+
   <button class="hot explore" onclick="openForm('find')"></button>
+  <button class="hot hollywood" onclick="openCity('Hollywood')"></button>
+  <button class="hot hallandale" onclick="openCity('Hallandale Beach')"></button>
+  <button class="hot aventura" onclick="openCity('Aventura')"></button>
+  <button class="hot fort" onclick="openCity('Fort Lauderdale')"></button>
+  <button class="hot miami" onclick="openCity('Miami')"></button>
+  <button class="hot arrow" onclick="openForm('find')"></button>
+
+  <button class="hot ownerPhoto" onclick="openForm('owner')"></button>
+  <button class="hot ownerText" onclick="openForm('owner')"></button>
   <button class="hot ownerBtn" onclick="openForm('owner')"></button>
-  <button class="hot findBottom" onclick="openForm('find')"></button>
+
+  <button class="hot bottomFind" onclick="openForm('find')"></button>
+  <button class="hot footerNav1" onclick="openForm('find')"></button>
+  <button class="hot footerNav2" onclick="openForm('owner')"></button>
+  <button class="hot footerNav3" onclick="openInfo('how')"></button>
+  <button class="hot footerNav4" onclick="openInfo('about')"></button>
+  <button class="hot footerContact" onclick="openForm('contact')"></button>
 </div>
 
 <div class="modal" id="findModal">
   <div class="box">
     <h2>Find Storage Near Me</h2>
+    <p>Tell us what you need to store. We’ll confirm availability.</p>
     <form action="https://formspree.io/f/xdavwkjp" method="POST">
       <input type="hidden" name="form_type" value="Renter request">
+      <input id="storagePreset" name="storage_type" placeholder="Storage type: boat, jet ski, trailer, RV..." required>
+      <input id="cityPreset" name="city" placeholder="City / area" required>
       <input name="name" placeholder="Your name" required>
       <input name="phone" placeholder="Phone number" required>
       <input name="email" type="email" placeholder="Email" required>
-      <select name="storage_type" required>
-        <option value="">What do you need to store?</option>
-        <option>Boat</option><option>Jet Ski</option><option>Trailer</option><option>RV</option><option>Extra Space</option>
-      </select>
-      <input name="city" placeholder="City / area" required>
-      <textarea name="details" placeholder="Size, date, notes"></textarea>
+      <textarea name="details" placeholder="Size, date, gated/covered, notes"></textarea>
       <button class="btn" type="submit">Send Request</button>
     </form>
     <button class="btn close" onclick="closeForms()">Close</button>
@@ -77,13 +139,14 @@ textarea{min-height:90px}
 <div class="modal" id="ownerModal">
   <div class="box">
     <h2>List Your Space</h2>
+    <p>List your driveway, garage, yard, lot or storage space.</p>
     <form action="https://formspree.io/f/xdavwkjp" method="POST">
       <input type="hidden" name="form_type" value="Owner listing">
       <input name="owner_name" placeholder="Your name" required>
       <input name="owner_phone" placeholder="Phone number" required>
       <input name="owner_email" type="email" placeholder="Email" required>
       <input name="city" placeholder="City / area" required>
-      <textarea name="details" placeholder="Describe your space, size, price, access"></textarea>
+      <textarea name="details" placeholder="Describe your space, size, price, access, rules"></textarea>
       <button class="btn" type="submit">Submit Space</button>
     </form>
     <button class="btn close" onclick="closeForms()">Close</button>
@@ -104,16 +167,48 @@ textarea{min-height:90px}
   </div>
 </div>
 
+<div class="modal" id="infoModal">
+  <div class="box">
+    <h2 id="infoTitle"></h2>
+    <p id="infoText"></p>
+    <button class="btn close" onclick="closeForms()">Close</button>
+  </div>
+</div>
+
 <script>
+function closeForms(){
+  document.querySelectorAll(".modal").forEach(m=>m.classList.remove("active"));
+}
+
 function openForm(type){
   closeForms();
   document.getElementById(type + "Modal").classList.add("active");
 }
-function closeForms(){
-  document.querySelectorAll(".modal").forEach(m=>m.classList.remove("active"));
+
+function openStorage(type){
+  document.getElementById("storagePreset").value = type;
+  document.getElementById("cityPreset").value = "";
+  openForm("find");
 }
-function scrollToForms(){
-  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+
+function openCity(city){
+  document.getElementById("storagePreset").value = "";
+  document.getElementById("cityPreset").value = city;
+  openForm("find");
+}
+
+function openInfo(type){
+  const data = {
+    how:["How It Works","Choose what you need to store, send a request, we confirm owner availability, then you book the space."],
+    about:["About SpaceShareFL","SpaceShareFL helps South Florida residents find local storage for boats, jet skis, trailers, RVs and extra parking."],
+    safe:["Safe & Secure","We focus on gated, private and verified spaces for safer local storage."],
+    flex:["Flexible Terms","Monthly rentals with simple booking and flexible availability."],
+    local:["Local & Convenient","We focus on Hollywood, Hallandale Beach, Aventura, Fort Lauderdale and Miami."],
+  };
+  document.getElementById("infoTitle").innerText = data[type][0];
+  document.getElementById("infoText").innerText = data[type][1];
+  closeForms();
+  document.getElementById("infoModal").classList.add("active");
 }
 </script>
 
