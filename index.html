@@ -6,134 +6,83 @@
 <title>SpaceShareFL</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#000;font-family:Arial,sans-serif}
-.site{position:relative;width:100%;max-width:1320px;margin:0 auto;background:#fff}
-.site img{width:100%;display:block}
-.hot{position:absolute;z-index:50;display:block;cursor:pointer}
-
-/* clickable zones */
-.nav-find{left:34%;top:2.6%;width:10%;height:2.2%}
-.nav-list{left:45%;top:2.6%;width:12%;height:2.2%}
-.nav-how{left:58%;top:2.6%;width:10%;height:2.2%}
-.nav-about{left:70%;top:2.6%;width:9%;height:2.2%}
-.nav-contact{left:80%;top:2.6%;width:8%;height:2.2%}
-.top-list{left:84%;top:1.7%;width:13%;height:3.7%}
-
-.hero-find{left:3.3%;top:24.4%;width:19.5%;height:3.5%}
-.hero-list{left:24.4%;top:24.4%;width:16.5%;height:3.5%}
-.explore{left:6.2%;top:63.6%;width:12%;height:3.3%}
-.owner-list{left:44.2%;top:78%;width:16%;height:3.3%}
-.bottom-find{left:73%;top:89.2%;width:21%;height:3.5%}
-
-/* modal */
-.modal{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);
-  z-index:999;align-items:center;justify-content:center;padding:20px
-}
-.modal.active{display:flex}
-.box{
-  width:100%;max-width:520px;background:#fff;border-radius:24px;
-  padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.35)
-}
-.box h2{margin:0 0 14px;color:#061b36;font-size:28px}
-.box p{color:#5f7280;margin:0 0 18px}
-input,select,textarea{
-  width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;
-  border-radius:12px;font-size:16px
-}
-textarea{min-height:90px}
-button,.send{
-  width:100%;border:0;background:#16b957;color:#fff;border-radius:14px;
-  padding:15px;font-size:16px;font-weight:800;margin-top:10px
-}
-.close{
-  background:#f2f2f2;color:#111;margin-top:8px
-}
+body{margin:0;font-family:Arial,sans-serif;background:#f6fbf8;color:#061b36}
+.hero img{width:100%;display:block}
+.ctaBar{position:sticky;bottom:0;background:#fff;padding:14px;display:flex;gap:12px;justify-content:center;box-shadow:0 -8px 30px #0002;z-index:20}
+.btn{background:#18b957;color:#fff;border:0;border-radius:14px;padding:15px 22px;font-weight:800;text-decoration:none}
+.btn.white{background:#fff;color:#0b7f3b;border:1px solid #bde8c9}
+.section{max-width:1000px;margin:35px auto;padding:25px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:#fff;border-radius:24px;padding:25px;box-shadow:0 15px 40px #0001;border:1px solid #dcebe3}
+h2{margin-top:0;font-size:30px}
+input,select,textarea{width:100%;padding:14px;margin:8px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}
+textarea{min-height:100px}
+button{width:100%;margin-top:10px}
+.note{text-align:center;color:#607482}
+@media(max-width:800px){.cards{grid-template-columns:1fr}.ctaBar{flex-direction:column}}
 </style>
 </head>
-
 <body>
 
-<div class="site">
+<section class="hero">
   <img src="IMG_8297.png" alt="SpaceShareFL">
+</section>
 
-  <a class="hot nav-find" onclick="openForm('find')"></a>
-  <a class="hot nav-list" onclick="openForm('owner')"></a>
-  <a class="hot nav-how" onclick="alert('How it works: choose storage, send request, we confirm availability, then book safely.')"></a>
-  <a class="hot nav-about" onclick="alert('SpaceShareFL helps South Florida boat, jet ski, trailer and RV owners find local storage.')"></a>
-  <a class="hot nav-contact" onclick="openForm('contact')"></a>
-  <a class="hot top-list" onclick="openForm('owner')"></a>
-
-  <a class="hot hero-find" onclick="openForm('find')"></a>
-  <a class="hot hero-list" onclick="openForm('owner')"></a>
-  <a class="hot explore" onclick="openForm('find')"></a>
-  <a class="hot owner-list" onclick="openForm('owner')"></a>
-  <a class="hot bottom-find" onclick="openForm('find')"></a>
+<div class="ctaBar">
+  <a class="btn" href="#find">🔎 Find Storage Near Me</a>
+  <a class="btn white" href="#list">🏠 List Your Space</a>
 </div>
 
-<div class="modal" id="findModal">
-  <div class="box">
-    <h2>Find Storage Near Me</h2>
-    <p>Send your request and we’ll confirm availability.</p>
-    <form action="https://formspree.io/f/xdavwkjp" method="POST">
-      <input type="hidden" name="form_type" value="Renter storage request">
+<section class="section">
+  <h2 style="text-align:center">What do you want to do?</h2>
+  <p class="note">Choose one option below. Your request will go directly to SpaceShareFL.</p>
+
+  <div class="cards">
+    <form id="find" class="card" action="https://formspree.io/f/xdavwkjp" method="POST">
+      <h2>Find parking / storage</h2>
+      <input type="hidden" name="form_type" value="Renter request">
       <input name="name" placeholder="Your name" required>
       <input name="phone" placeholder="Phone number" required>
       <input name="email" type="email" placeholder="Email" required>
       <select name="storage_type" required>
         <option value="">What do you need to store?</option>
-        <option>Boat</option><option>Jet Ski</option><option>Trailer</option><option>RV</option><option>Extra Space</option>
+        <option>Boat</option>
+        <option>Jet Ski</option>
+        <option>Trailer</option>
+        <option>RV</option>
+        <option>Car / Extra Parking</option>
       </select>
-      <input name="city" placeholder="City / area" required>
-      <textarea name="details" placeholder="Size, timing, notes"></textarea>
-      <button type="submit">Send Request</button>
+      <input name="city" placeholder="City / area: Hollywood, Miami, Aventura..." required>
+      <textarea name="details" placeholder="Size, date, gated/covered, notes"></textarea>
+      <button class="btn" type="submit">Send Request</button>
     </form>
-    <button class="close" onclick="closeForms()">Close</button>
-  </div>
-</div>
 
-<div class="modal" id="ownerModal">
-  <div class="box">
-    <h2>List Your Space</h2>
-    <p>List your driveway, yard, garage or storage space.</p>
-    <form action="https://formspree.io/f/xdavwkjp" method="POST">
-      <input type="hidden" name="form_type" value="Owner space listing">
+    <form id="list" class="card" action="https://formspree.io/f/xdavwkjp" method="POST">
+      <h2>List your space</h2>
+      <input type="hidden" name="form_type" value="Owner listing">
       <input name="owner_name" placeholder="Your name" required>
       <input name="owner_phone" placeholder="Phone number" required>
       <input name="owner_email" type="email" placeholder="Email" required>
       <input name="city" placeholder="City / area" required>
-      <textarea name="details" placeholder="Describe your space, size, access, price"></textarea>
-      <button type="submit">Submit Space</button>
+      <select name="space_type" required>
+        <option value="">Space type</option>
+        <option>Driveway</option>
+        <option>Garage</option>
+        <option>Yard</option>
+        <option>Gated lot</option>
+        <option>Commercial space</option>
+      </select>
+      <textarea name="details" placeholder="Size, access, price, gated/covered, rules"></textarea>
+      <button class="btn" type="submit">Submit My Space</button>
     </form>
-    <button class="close" onclick="closeForms()">Close</button>
   </div>
-</div>
+</section>
 
-<div class="modal" id="contactModal">
-  <div class="box">
-    <h2>Contact SpaceShareFL</h2>
-    <form action="https://formspree.io/f/xdavwkjp" method="POST">
-      <input type="hidden" name="form_type" value="Support request">
-      <input name="name" placeholder="Your name" required>
-      <input name="email" type="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <button class="close" onclick="closeForms()">Close</button>
-  </div>
-</div>
-
-<script>
-function openForm(type){
-  closeForms();
-  if(type==="find") document.getElementById("findModal").classList.add("active");
-  if(type==="owner") document.getElementById("ownerModal").classList.add("active");
-  if(type==="contact") document.getElementById("contactModal").classList.add("active");
-}
-function closeForms(){
-  document.querySelectorAll(".modal").forEach(m=>m.classList.remove("active"));
-}
-</script>
+<section class="section card">
+  <h2>Contact SpaceShareFL</h2>
+  <p>Need help? Email us directly:</p>
+  <a class="btn" href="mailto:edidkovskiy23@gmail.com">Contact Support</a>
+</section>
 
 </body>
 </html>
