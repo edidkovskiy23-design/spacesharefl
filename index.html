@@ -13,344 +13,132 @@ a{text-decoration:none;color:inherit}
 header{position:sticky;top:0;z-index:50;background:white;border-bottom:1px solid #edf2ee}
 .nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{display:flex;align-items:center;gap:12px;font-size:30px;font-weight:900}
-.logo span{color:#18b957}
-.logo small{display:block;font-size:13px;color:#607482}
+.logo span{color:#18b957}.logo small{display:block;font-size:13px;color:#607482}
 nav{display:flex;gap:32px;font-weight:800;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#18b957;color:white;border:0;border-radius:14px;padding:15px 22px;font-weight:900;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bfe8cc}
 
-.hero{
-position:relative;
-min-height:660px;
-background:
-linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.72) 55%,rgba(255,255,255,.08) 72%),
-url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1800&q=90') right center/67% 100% no-repeat;
-overflow:hidden
-}
-.hero:after{
-content:"";
-position:absolute;
-right:0;
-bottom:0;
-width:55%;
-height:75%;
-background:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1200&q=90') right bottom/contain no-repeat
-}
+.hero{position:relative;min-height:660px;background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.72) 55%,rgba(255,255,255,.05) 72%),url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1800&q=90') right center/67% 100% no-repeat;overflow:hidden}
+.hero:after{content:"";position:absolute;right:0;bottom:0;width:55%;height:75%;background:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1200&q=90') right bottom/contain no-repeat}
 .heroContent{position:relative;z-index:2;width:520px;padding:85px 0}
 .hero h1{font-size:60px;line-height:1.08;margin:0 0 22px;letter-spacing:-2px}
 .hero strong{color:#18b957}
 .hero p{font-size:20px;line-height:1.45;color:#18344a}
 .actions{display:flex;gap:16px;margin:26px 0}
-.rating{display:flex;gap:12px;align-items:center;font-size:14px;color:#405967;font-weight:800}
-.stars{color:#f5b400;font-size:20px}
+.rating{display:flex;gap:12px;align-items:center;font-size:14px;color:#405967;font-weight:800}.stars{color:#f5b400;font-size:20px}
 .safe{position:absolute;right:70px;bottom:90px;z-index:3;background:white;border-radius:22px;padding:18px 22px;box-shadow:0 18px 44px #0002;max-width:240px}
 
-.trust{margin-top:-48px;position:relative;z-index:5}
-.trustGrid{background:white;border-radius:24px;box-shadow:0 18px 44px #0002;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
-.trustItem{padding:26px;display:flex;gap:14px;border-right:1px solid #edf2ee;cursor:pointer}
-.trustItem:last-child{border-right:0}
-.icon{font-size:32px;color:#18b957}
-.trustItem p{margin:5px 0 0;color:#607482;font-size:13px}
+.trust{margin-top:-48px;position:relative;z-index:5}.trustGrid{background:white;border-radius:24px;box-shadow:0 18px 44px #0002;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}.trustItem{padding:26px;display:flex;gap:14px;border-right:1px solid #edf2ee}.trustItem:last-child{border-right:0}.icon{font-size:32px;color:#18b957}.trustItem p{margin:5px 0 0;color:#607482;font-size:13px}
 
-section{padding:70px 0}
-.title{text-align:center;font-size:34px;margin:0 0 28px}
-.types{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
-.card{background:white;border:1px solid #dcebe3;border-radius:18px;box-shadow:0 12px 32px #0001;overflow:hidden;text-align:center;cursor:pointer}
-.cardImg{height:145px;background-size:cover;background-position:center}
-.round{width:64px;height:64px;border-radius:50%;background:white;margin:-32px auto 10px;display:grid;place-items:center;border:1px solid #dcebe3;color:#18b957;font-size:26px;font-weight:900}
-.card h3{margin:0 0 6px}
-.card p{color:#607482;font-size:13px;margin:0 0 22px}
+section{padding:70px 0}.title{text-align:center;font-size:34px;margin:0 0 28px}
+.types{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}.card{background:white;border:1px solid #dcebe3;border-radius:18px;box-shadow:0 12px 32px #0001;overflow:hidden;text-align:center}.cardImg{height:145px;background-size:cover;background-position:center}.round{width:64px;height:64px;border-radius:50%;background:white;margin:-32px auto 10px;display:grid;place-items:center;border:1px solid #dcebe3;color:#18b957;font-size:26px;font-weight:900}.card h3{margin:0 0 6px}.card p{color:#607482;font-size:13px;margin:0 0 22px}
 
-.locationsBox{background:#f0fbf5;border-radius:24px;padding:34px;display:grid;grid-template-columns:1.2fr 4fr;gap:28px}
-.locationsBox h2{font-size:31px;color:#0b7f3b;margin:0 0 12px}
-.locations{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.city{cursor:pointer}
-.cityPic{height:145px;border-radius:14px;background-size:cover;background-position:center}
-.cityName{text-align:center;font-weight:900;margin-top:10px;font-size:13px}
+.locationsBox{background:#f0fbf5;border-radius:24px;padding:34px;display:grid;grid-template-columns:1.2fr 4fr;gap:28px}.locationsBox h2{font-size:31px;color:#0b7f3b;margin:0 0 12px}.locations{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.cityPic{height:145px;border-radius:14px;background-size:cover;background-position:center}.cityName{text-align:center;font-weight:900;margin-top:10px;font-size:13px}
 
-.owner{background:#f2fbf6;border-radius:24px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:34px;align-items:center}
-.ownerImg{height:300px;border-radius:18px;background:url('https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=900&q=85') center/cover}
-.owner h2{font-size:34px;color:#0b7f3b;margin:0 0 12px}
-.checks{line-height:1.9;font-weight:800}
+.owner{background:#f2fbf6;border-radius:24px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:34px;align-items:center}.ownerImg{height:300px;border-radius:18px;background:url('https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=900&q=85') center/cover}.owner h2{font-size:34px;color:#0b7f3b;margin:0 0 12px}.checks{line-height:1.9;font-weight:800}
 
-.cta{background:linear-gradient(135deg,#0b7f3b,#061b36);color:white;border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:center}
-.cta h2{margin:0;font-size:32px}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.feature{text-align:center}
-.feature div{font-size:42px;color:#18b957}
-.feature p{color:#607482;font-size:13px}
+.cta{background:linear-gradient(135deg,#0b7f3b,#061b36);color:white;border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:center}.cta h2{margin:0;font-size:32px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.feature{text-align:center}.feature div{font-size:42px;color:#18b957}.feature p{color:#607482;font-size:13px}
 
-.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;align-items:center;justify-content:center;padding:20px}
-.modal.active{display:flex}
-.box{background:white;width:100%;max-width:520px;border-radius:24px;padding:26px}
-.box h2{margin-top:0}
-input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}
-textarea{min-height:90px}
-.close{background:#eee;color:#111;width:100%;margin-top:8px}
+.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.spot{background:white;border:1px solid #dcebe3;border-radius:22px;box-shadow:0 12px 32px #0001;overflow:hidden}.spotImg{height:220px;background-size:cover;background-position:center}.spotBody{padding:22px}
+
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;align-items:center;justify-content:center;padding:20px}.modal.active{display:flex}.box{background:white;width:100%;max-width:520px;border-radius:24px;padding:26px}.box h2{margin-top:0}input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}textarea{min-height:90px}.close{background:#eee;color:#111;width:100%;margin-top:8px}
 
 footer{border-top:1px solid #edf2ee;padding:26px 0;color:#607482}
 
-@media(max-width:900px){
-nav{display:none}
-.hero{background:#eaf8ff}
-.hero:after,.safe{display:none}
-.heroContent{width:auto;padding:50px 0}
-.hero h1{font-size:42px}
-.actions,.cta{display:block}
-.btn{width:100%;margin:6px 0}
-.trustGrid,.types,.locationsBox,.locations,.owner,.features{grid-template-columns:1fr}
-.trustItem{border-right:0;border-bottom:1px solid #edf2ee}
-}
+@media(max-width:900px){nav{display:none}.hero{background:#eaf8ff}.hero:after,.safe{display:none}.heroContent{width:auto;padding:50px 0}.hero h1{font-size:42px}.actions,.cta{display:block}.btn{width:100%;margin:6px 0}.trustGrid,.types,.locationsBox,.locations,.owner,.features,.spots{grid-template-columns:1fr}.trustItem{border-right:0;border-bottom:1px solid #edf2ee}}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <div class="logo">🌊 <div>SpaceShare<span>FL</span><small>Local storage made simple.</small></div></div>
-    <nav>
-      <a href="#find" onclick="openForm('find')">Find Storage</a>
-      <a href="#owners" onclick="openForm('owner')">List Your Space</a>
-      <a href="#how">How It Works</a>
-      <a href="#about">About Us</a>
-      <a onclick="openForm('contact')">Contact</a>
-    </nav>
-    <button class="btn" onclick="openForm('owner')">⌂ List Your Space</button>
+<header><div class="wrap nav">
+  <div class="logo">🌊 <div>SpaceShare<span>FL</span><small>Local storage made simple.</small></div></div>
+  <nav><a href="#find" onclick="openForm('find')">Find Storage</a><a href="#owners" onclick="openForm('owner')">List Your Space</a><a href="#how">How It Works</a><a href="#about">About Us</a><a onclick="openForm('contact')">Contact</a></nav>
+  <button class="btn" onclick="openForm('owner')">⌂ List Your Space</button>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="heroContent">
+    <h1>Find the perfect storage for your <strong>boat, jet ski, trailer or RV.</strong></h1>
+    <p>Safe, local and convenient storage across South Florida.</p>
+    <div class="actions"><button class="btn" onclick="openForm('find')">🔍 Find Storage Near Me</button><button class="btn white" onclick="openForm('owner')">⌂ List Your Space</button></div>
+    <div class="rating"><span class="stars">★★★★★</span><span>Trusted by boaters and RV owners across South Florida</span></div>
   </div>
-</header>
+  <div class="safe"><b>Safe & Secure</b><p>Gated, private and verified spaces.</p></div>
+</div></section>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="heroContent">
-      <h1>Find the perfect storage for your <strong>boat, jet ski, trailer or RV.</strong></h1>
-      <p>Safe, local and convenient storage across South Florida.</p>
-      <div class="actions">
-        <button class="btn" onclick="openForm('find')">🔍 Find Storage Near Me</button>
-        <button class="btn white" onclick="openForm('owner')">⌂ List Your Space</button>
-      </div>
-      <div class="rating"><span class="stars">★★★★★</span><span>Trusted by boaters and RV owners across South Florida</span></div>
-    </div>
-    <div class="safe"><b>Safe & Secure</b><p>Gated, private and verified spaces.</p></div>
-  </div>
-</section>
-
-<div class="wrap trust">
-  <div class="trustGrid">
-    <div class="trustItem" onclick="info('Safe & Secure','Gated, private and verified spaces.')">
-      <div class="icon">♢</div><div><b>Safe & Secure</b><p>Gated, private and verified spaces.</p></div>
-    </div>
-    <div class="trustItem" onclick="info('Flexible Terms','Monthly rentals. Cancel anytime.')">
-      <div class="icon">▣</div><div><b>Flexible Terms</b><p>Monthly rentals. Cancel anytime.</p></div>
-    </div>
-    <div class="trustItem" onclick="info('Local & Convenient','Across Hollywood, Aventura, Miami and more.')">
-      <div class="icon">⌖</div><div><b>Local & Convenient</b><p>Across Hollywood, Aventura, Miami & more.</p></div>
-    </div>
-    <div class="trustItem" onclick="openForm('contact')">
-      <div class="icon">☏</div><div><b>Support You Can Trust</b><p>Real people here to help.</p></div>
-    </div>
-  </div>
-</div>
-
-<section class="wrap" id="find">
-  <h2 class="title">What can you store?</h2>
-
-  <div class="types">
-
-    <div class="card" onclick="storage('Boat')">
-      <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=700&q=80')"></div>
-      <div class="round">⛵</div>
-      <h3>Boats</h3>
-      <p>All sizes welcome</p>
-    </div>
-
-    <div class="card" onclick="storage('Jet Ski')">
-      <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=700&q=80')"></div>
-      <div class="round">🌊</div>
-      <h3>Jet Skis</h3>
-      <p>Single or multiple</p>
-    </div>
-
-    <div class="card" onclick="storage('Trailer')">
-      <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80')"></div>
-      <div class="round">▭</div>
-      <h3>Trailers</h3>
-      <p>Utility, cargo & more</p>
-    </div>
-
-    <div class="card" onclick="storage('RV')">
-      <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=700&q=80')"></div>
-      <div class="round">🚐</div>
-      <h3>RVs</h3>
-      <p>Motorhomes & campers</p>
-    </div>
-
-    <div class="card" onclick="storage('Extra Space')">
-      <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80')"></div>
-      <div class="round">P</div>
-      <h3>Extra Space</h3>
-      <p>Cars, trucks & more</p>
-    </div>
-
-  </div>
-</section>
+<div class="wrap trust"><div class="trustGrid">
+  <div class="trustItem" onclick="info('Safe & Secure','Gated, private and verified spaces.')"><div class="icon">♢</div><div><b>Safe & Secure</b><p>Gated, private and verified spaces.</p></div></div>
+  <div class="trustItem" onclick="info('Flexible Terms','Monthly rentals. Cancel anytime.')"><div class="icon">▣</div><div><b>Flexible Terms</b><p>Monthly rentals. Cancel anytime.</p></div></div>
+  <div class="trustItem" onclick="info('Local & Convenient','Across Hollywood, Aventura, Miami and more.')"><div class="icon">⌖</div><div><b>Local & Convenient</b><p>Across Hollywood, Aventura, Miami & more.</p></div></div>
+  <div class="trustItem" onclick="openForm('contact')"><div class="icon">☏</div><div><b>Support You Can Trust</b><p>Real people here to help.</p></div></div>
+</div></div>
 
 <section class="wrap">
-  <div class="locationsBox">
-    <div>
-      <h2>Storage locations across South Florida</h2>
-      <p>We connect you with trusted space owners in the best areas.</p>
-      <button class="btn" onclick="openForm('find')">Explore Areas</button>
-    </div>
+<h2 class="title">What can you store?</h2>
+<div class="types">
 
-    <div class="locations">
-
-      <div class="city" onclick="city('Hollywood')">
-        <div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80')"></div>
-        <div class="cityName">Hollywood</div>
-      </div>
-
-      <div class="city" onclick="city('Hallandale Beach')">
-        <div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80')"></div>
-        <div class="cityName">Hallandale Beach</div>
-      </div>
-
-      <div class="city" onclick="city('Aventura')">
-        <div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?auto=format&fit=crop&w=500&q=80')"></div>
-        <div class="cityName">Aventura</div>
-      </div>
-
-      <div class="city" onclick="city('Fort Lauderdale')">
-        <div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=500&q=80')"></div>
-        <div class="cityName">Fort Lauderdale</div>
-      </div>
-
-      <div class="city" onclick="city('Miami')">
-        <div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=500&q=80')"></div>
-        <div class="cityName">Miami</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="wrap owner" id="owners">
-  <div class="ownerImg"></div>
-  <div>
-    <h2>Have space to rent?</h2>
-    <p>Earn extra income by listing your driveway, yard or storage space.</p>
-    <div class="checks">
-      ✓ Set your own price<br>
-      ✓ Choose your availability<br>
-      ✓ We handle secure payments<br>
-      ✓ Get renters you can trust
-    </div>
-    <br>
-    <button class="btn" onclick="openForm('owner')">⌂ List Your Space</button>
-  </div>
-</section>
-
-<section class="wrap features" id="how">
-  <div class="feature"><div>♢</div><b>Verified Owners</b><p>All spaces are reviewed.</p></div>
-  <div class="feature"><div>▣</div><b>Secure Payments</b><p>Safe checkout.</p></div>
-  <div class="feature"><div>♟</div><b>Local Community</b><p>Support local owners.</p></div>
-  <div class="feature"><div>☆</div><b>Top Rated Service</b><p>Support when needed.</p></div>
-</section>
-
-<section class="wrap" id="about">
-  <div class="cta">
-    <div>
-      <h2>Ready to find your space?</h2>
-      <p>Join boaters, jet ski owners and RV owners who trust SpaceShareFL.</p>
-    </div>
-    <button class="btn white" onclick="openForm('find')">🔍 Find Storage Near Me</button>
-  </div>
-</section>
-
-<div class="modal" id="findModal">
-  <div class="box">
-    <h2>Find Storage Near Me</h2>
-    <form action="https://formspree.io/f/xdavwkjp" method="POST">
-      <input type="hidden" name="form_type" value="Renter request">
-      <input id="storage" name="storage_type" placeholder="Storage type" required>
-      <input id="city" name="city" placeholder="City / area" required>
-      <input name="name" placeholder="Your name" required>
-      <input name="phone" placeholder="Phone" required>
-      <input name="email" type="email" placeholder="Email" required>
-      <textarea name="details" placeholder="Size, date, notes"></textarea>
-      <button class="btn" type="submit">Send Request</button>
-    </form>
-    <button class="btn close" onclick="closeForms()">Close</button>
-  </div>
+<div class="card" onclick="storage('Boat')">
+  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=700&q=80')"></div>
+  <div class="round">⛵</div><h3>Boats</h3><p>All sizes welcome</p>
 </div>
 
-<div class="modal" id="ownerModal">
-  <div class="box">
-    <h2>List Your Space</h2>
-    <form action="https://formspree.io/f/xdavwkjp" method="POST">
-      <input type="hidden" name="form_type" value="Owner listing">
-      <input name="name" placeholder="Your name" required>
-      <input name="phone" placeholder="Phone" required>
-      <input name="email" type="email" placeholder="Email" required>
-      <input name="city" placeholder="City / area" required>
-      <textarea name="details" placeholder="Describe your space, size, price, access"></textarea>
-      <button class="btn" type="submit">Submit Space</button>
-    </form>
-    <button class="btn close" onclick="closeForms()">Close</button>
-  </div>
+<div class="card" onclick="storage('Jet Ski')">
+  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=700&q=80')"></div>
+  <div class="round">🌊</div><h3>Jet Skis</h3><p>Single or multiple</p>
 </div>
 
-<div class="modal" id="contactModal">
-  <div class="box">
-    <h2>Contact SpaceShareFL</h2>
-    <form action="https://formspree.io/f/xdavwkjp" method="POST">
-      <input type="hidden" name="form_type" value="Support request">
-      <input name="name" placeholder="Your name" required>
-      <input name="email" type="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message"></textarea>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
-    <button class="btn close" onclick="closeForms()">Close</button>
-  </div>
+<div class="card" onclick="storage('Trailer')">
+  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80')"></div>
+  <div class="round">▭</div><h3>Trailers</h3><p>Utility, cargo & more</p>
 </div>
 
-<div class="modal" id="infoModal">
-  <div class="box">
-    <h2 id="infoTitle"></h2>
-    <p id="infoText"></p>
-    <button class="btn close" onclick="closeForms()">Close</button>
-  </div>
+<div class="card" onclick="storage('RV')">
+  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=700&q=80')"></div>
+  <div class="round">🚐</div><h3>RVs</h3><p>Motorhomes & campers</p>
 </div>
 
-<footer>
-  <div class="wrap">© 2026 SpaceShareFL</div>
-</footer>
+<div class="card" onclick="storage('Extra Space')">
+  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80')"></div>
+  <div class="round">P</div><h3>Extra Space</h3><p>Cars, trucks & more</p>
+</div>
+
+</div>
+</section>
+
+<section class="wrap"><div class="locationsBox">
+  <div><h2>Storage locations across South Florida</h2><p>We connect you with trusted space owners in the best areas.</p><button class="btn" onclick="openForm('find')">Explore Areas</button></div>
+  <div class="locations">
+    <div onclick="city('Hollywood')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Hollywood</div></div>
+    <div onclick="city('Hallandale Beach')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Hallandale Beach</div></div>
+    <div onclick="city('Aventura')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Aventura</div></div>
+    <div onclick="city('Fort Lauderdale')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Fort Lauderdale</div></div>
+    <div onclick="city('Miami')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Miami</div></div>
+  </div>
+</div></section>
+
+<section class="wrap owner" id="owners"><div class="ownerImg"></div><div><h2>Have space to rent?</h2><p>Earn extra income by listing your driveway, yard or storage space.</p><div class="checks">✓ Set your own price<br>✓ Choose your availability<br>✓ We handle secure payments<br>✓ Get renters you can trust</div><br><button class="btn" onclick="openForm('owner')">⌂ List Your Space</button></div></section>
+
+<section class="wrap features"><div class="feature"><div>♢</div><b>Verified Owners</b><p>All spaces are reviewed.</p></div><div class="feature"><div>▣</div><b>Secure Payments</b><p>Safe checkout.</p></div><div class="feature"><div>♟</div><b>Local Community</b><p>Support local owners.</p></div><div class="feature"><div>☆</div><b>Top Rated Service</b><p>Support when needed.</p></div></section>
+
+<section class="wrap"><div class="cta"><div><h2>Ready to find your space?</h2><p>Join hundreds of boaters and RV owners who trust SpaceShareFL.</p></div><button class="btn white" onclick="openForm('find')">🔍 Find Storage Near Me</button></div></section>
+
+<div class="modal" id="findModal"><div class="box"><h2>Find Storage Near Me</h2><form action="https://formspree.io/f/xdavwkjp" method="POST"><input type="hidden" name="form_type" value="Renter request"><input id="storage" name="storage_type" placeholder="Storage type" required><input id="city" name="city" placeholder="City / area" required><input name="name" placeholder="Your name" required><input name="phone" placeholder="Phone" required><input name="email" type="email" placeholder="Email" required><textarea name="details" placeholder="Size, date, notes"></textarea><button class="btn" type="submit">Send Request</button></form><button class="btn close" onclick="closeForms()">Close</button></div></div>
+
+<div class="modal" id="ownerModal"><div class="box"><h2>List Your Space</h2><form action="https://formspree.io/f/xdavwkjp" method="POST"><input type="hidden" name="form_type" value="Owner listing"><input name="name" placeholder="Your name" required><input name="phone" placeholder="Phone" required><input name="email" type="email" placeholder="Email" required><input name="city" placeholder="City / area" required><textarea name="details" placeholder="Describe your space, size, price, access"></textarea><button class="btn" type="submit">Submit Space</button></form><button class="btn close" onclick="closeForms()">Close</button></div></div>
+
+<div class="modal" id="contactModal"><div class="box"><h2>Contact SpaceShareFL</h2><form action="https://formspree.io/f/xdavwkjp" method="POST"><input type="hidden" name="form_type" value="Support request"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email" required><textarea name="message" placeholder="Message"></textarea><button class="btn" type="submit">Send Message</button></form><button class="btn close" onclick="closeForms()">Close</button></div></div>
+
+<div class="modal" id="infoModal"><div class="box"><h2 id="infoTitle"></h2><p id="infoText"></p><button class="btn close" onclick="closeForms()">Close</button></div></div>
+
+<footer><div class="wrap">© 2026 SpaceShareFL</div></footer>
 
 <script>
-function closeForms(){
-  document.querySelectorAll('.modal').forEach(m=>m.classList.remove('active'));
-}
-
-function openForm(t){
-  closeForms();
-  document.getElementById(t+'Modal').classList.add('active');
-}
-
-function storage(t){
-  document.getElementById('storage').value=t;
-  openForm('find');
-}
-
-function city(c){
-  document.getElementById('city').value=c;
-  openForm('find');
-}
-
-function info(t,x){
-  document.getElementById('infoTitle').innerText=t;
-  document.getElementById('infoText').innerText=x;
-  closeForms();
-  document.getElementById('infoModal').classList.add('active');
-}
+function closeForms(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove('active'))}
+function openForm(t){closeForms();document.getElementById(t+'Modal').classList.add('active')}
+function storage(t){document.getElementById('storage').value=t;openForm('find')}
+function city(c){document.getElementById('city').value=c;openForm('find')}
+function info(t,x){document.getElementById('infoTitle').innerText=t;document.getElementById('infoText').innerText=x;closeForms();document.getElementById('infoModal').classList.add('active')}
 </script>
 
 </body>
