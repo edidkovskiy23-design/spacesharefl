@@ -18,8 +18,8 @@ nav{display:flex;gap:32px;font-weight:800;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#18b957;color:white;border:0;border-radius:14px;padding:15px 22px;font-weight:900;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bfe8cc}
 
-.hero{position:relative;min-height:660px;background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.72) 55%,rgba(255,255,255,.05) 72%),url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1800&q=90') right center/67% 100% no-repeat;overflow:hidden}
-.hero:after{content:"";position:absolute;right:0;bottom:0;width:55%;height:75%;background:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1200&q=90') right bottom/contain no-repeat}
+.hero{position:relative;min-height:660px;background:linear-gradient(90deg,#fff 0%,#fff 38%,rgba(255,255,255,.72) 55%,rgba(255,255,255,.05) 72%),url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=1800&q=90') right center/67% 100% no-repeat;overflow:hidden}
+.hero:after{content:"";position:absolute;right:0;bottom:0;width:55%;height:75%;background:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=1200&q=90') right bottom/contain no-repeat}
 .heroContent{position:relative;z-index:2;width:520px;padding:85px 0}
 .hero h1{font-size:60px;line-height:1.08;margin:0 0 22px;letter-spacing:-2px}
 .hero strong{color:#18b957}
@@ -77,43 +77,22 @@ footer{border-top:1px solid #edf2ee;padding:26px 0;color:#607482}
 <section class="wrap">
 <h2 class="title">What can you store?</h2>
 <div class="types">
-
-<div class="card" onclick="storage('Boat')">
-  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=700&q=80')"></div>
-  <div class="round">⛵</div><h3>Boats</h3><p>All sizes welcome</p>
-</div>
-
-<div class="card" onclick="storage('Jet Ski')">
-  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=700&q=80')"></div>
-  <div class="round">🌊</div><h3>Jet Skis</h3><p>Single or multiple</p>
-</div>
-
-<div class="card" onclick="storage('Trailer')">
-  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80')"></div>
-  <div class="round">▭</div><h3>Trailers</h3><p>Utility, cargo & more</p>
-</div>
-
-<div class="card" onclick="storage('RV')">
-  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=700&q=80')"></div>
-  <div class="round">🚐</div><h3>RVs</h3><p>Motorhomes & campers</p>
-</div>
-
-<div class="card" onclick="storage('Extra Space')">
-  <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80')"></div>
-  <div class="round">P</div><h3>Extra Space</h3><p>Cars, trucks & more</p>
-</div>
-
+  <div class="card" onclick="storage('Boat')"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?auto=format&fit=crop&w=700&q=80')"></div><div class="round">⛵</div><h3>Boats</h3><p>All sizes welcome</p></div>
+  <div class="card" onclick="storage('Jet Ski')"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80')"></div><div class="round">🌊</div><h3>Jet Skis</h3><p>Single or multiple</p></div>
+  <div class="card" onclick="storage('Trailer')"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80')"></div><div class="round">▭</div><h3>Trailers</h3><p>Utility, cargo & more</p></div>
+  <div class="card" onclick="storage('RV')"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1515876305430-f06edab8282a?auto=format&fit=crop&w=700&q=80')"></div><div class="round">🚐</div><h3>RVs</h3><p>Motorhomes & campers</p></div>
+  <div class="card" onclick="storage('Extra Space')"><div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=700&q=80')"></div><div class="round">P</div><h3>Extra Space</h3><p>Cars, trucks & more</p></div>
 </div>
 </section>
 
 <section class="wrap"><div class="locationsBox">
   <div><h2>Storage locations across South Florida</h2><p>We connect you with trusted space owners in the best areas.</p><button class="btn" onclick="openForm('find')">Explore Areas</button></div>
   <div class="locations">
-    <div onclick="city('Hollywood')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Hollywood</div></div>
-    <div onclick="city('Hallandale Beach')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Hallandale Beach</div></div>
+    <div onclick="city('Hollywood')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Hollywood</div></div>
+    <div onclick="city('Hallandale Beach')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Hallandale Beach</div></div>
     <div onclick="city('Aventura')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1535498730771-e735b998cd64?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Aventura</div></div>
-    <div onclick="city('Fort Lauderdale')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Fort Lauderdale</div></div>
-    <div onclick="city('Miami')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Miami</div></div>
+    <div onclick="city('Fort Lauderdale')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Fort Lauderdale</div></div>
+    <div onclick="city('Miami')"><div class="cityPic" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80')"></div><div class="cityName">Miami</div></div>
   </div>
 </div></section>
 
