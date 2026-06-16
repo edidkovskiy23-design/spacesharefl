@@ -28,8 +28,14 @@ nav{display:flex;gap:32px;font-weight:800;font-size:14px}
 
 footer{border-top:1px solid #edf2ee;padding:26px 0;color:#607482}
 
-@media(max-width:900px){nav{display:none}.hero{background:#eaf8ff}.hero:after{content:"";position:absolute;right:55px;top:120px;width:50%;height:58%;background:url('IMG_1334.jpeg') center/cover no-repeat;border-radius:22px;box-shadow:0 22px 55px rgba(0,0,0,.14)}}
-</style>
+@media(max-width:900px){
+nav{display:none}
+.hero{min-height:620px}
+.heroContent{padding-top:120px}
+.hero h1{font-size:42px}
+.trustGrid,.types,.locations,.features,.spots{grid-template-columns:1fr}
+.locationsBox,.owner{grid-template-columns:1fr}
+}</style>
 </head><body>
 
 <header><div class="wrap nav">
