@@ -22,8 +22,26 @@ nav{display:flex;gap:32px;font-weight:800;font-size:14px}
 .hero:before{content:"";position:absolute;top:0;left:0;right:0;height:170px;background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,0));z-index:1}
 .heroContent{position:relative;z-index:5;max-width:760px;padding-top:180px;color:white}
 .hero h1{font-size:58px;line-height:1.08;margin:0 0 24px;font-weight:900;color:white}.hero p{font-size:24px;line-height:1.45;color:white}
+.trust{margin-top:-48px;position:relative;z-index:5}
+.trustGrid{background:white;border-radius:24px;box-shadow:0 18px 44px #0002;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
+.trustItem{padding:26px;display:flex;gap:14px;border-right:1px solid #edf2ee}
+.trustItem:last-child{border-right:0}
 
-.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.spot{background:white;border:1px solid #dcebe3;border-radius:22px;box-shadow:0 12px 32px #0001;overflow:hidden}.spotImg{height:220px;background-size:cover;background-position:center}.spotBody{padding:22px}
+section{padding:70px 0}
+.title{text-align:center;font-size:34px;margin:0 0 28px}
+
+.types{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.card{background:white;border:1px solid #dcebe3;border-radius:18px;box-shadow:0 12px 32px #0001;overflow:hidden;text-align:center}
+.cardImg{height:145px;background-size:cover;background-position:center}
+
+.locationsBox{background:#f0fbf5;border-radius:24px;padding:34px;display:grid;grid-template-columns:1.2fr 4fr;gap:28px}
+.locations{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+
+.owner{background:#f2fbf6;border-radius:24px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:34px}
+.ownerImg{height:300px;border-radius:18px;background:url('IMG_1328.jpeg') center/cover no-repeat}
+
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature{text-align:center}.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.spot{background:white;border:1px solid #dcebe3;border-radius:22px;box-shadow:0 12px 32px #0001;overflow:hidden}.spotImg{height:220px;background-size:cover;background-position:center}.spotBody{padding:22px}
 .safe{position:absolute;right:80px;bottom:90px;z-index:6;background:white;border-radius:18px;padding:14px 18px;box-shadow:0 14px 34px #0002;max-width:210px;font-size:14px}.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;align-items:center;justify-content:center;padding:20px}.modal.active{display:flex}.box{background:white;width:100%;max-width:520px;border-radius:24px;padding:26px}.box h2{margin-top:0}input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}textarea{min-height:90px}.close{background:#eee;color:#111;width:100%;margin-top:8px}
 
 footer{border-top:1px solid #edf2ee;padding:26px 0;color:#607482}
