@@ -18,42 +18,31 @@ nav{display:flex;gap:32px;font-weight:800;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#18b957;color:white;border:0;border-radius:14px;padding:15px 22px;font-weight:900;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bfe8cc}
 
-.hero{position:relative;min-height:720px;background:linear-gradient(rgba(6,27,54,.38),rgba(6,27,54,.38)),url('IMG_1334.jpeg') center center/cover no-repeat;overflow:hidden}
-.hero:before{content:"";position:absolute;top:0;left:0;right:0;height:170px;background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,0));z-index:1}
-.heroContent{position:relative;z-index:5;max-width:760px;padding-top:180px;color:white}
-.hero h1{font-size:58px;line-height:1.08;margin:0 0 24px;font-weight:900;color:white}.hero p{font-size:24px;line-height:1.45;color:white}
-.trust{margin-top:-48px;position:relative;z-index:5}
-.trustGrid{background:white;border-radius:24px;box-shadow:0 18px 44px #0002;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}
-.trustItem{padding:26px;display:flex;gap:14px;border-right:1px solid #edf2ee}
-.trustItem:last-child{border-right:0}
+.hero{position:relative;min-height:660px;background:#fff;overflow:hidden}.hero strong{color:#18b957}
+.hero p{font-size:20px;line-height:1.45;color:#18344a}
+.actions{display:flex;gap:16px;margin:26px 0}
+.rating{display:flex;gap:12px;align-items:center;font-size:14px;color:#405967;font-weight:800}.stars{color:#f5b400;font-size:20px}
+.safe{position:absolute;right:95px;bottom:135px;z-index:3;background:white;border-radius:18px;padding:14px 18px;box-shadow:0 14px 34px #0002;max-width:210px;font-size:14px}
+.trust{margin-top:-48px;position:relative;z-index:5}.trustGrid{background:white;border-radius:24px;box-shadow:0 18px 44px #0002;display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden}.trustItem{padding:26px;display:flex;gap:14px;border-right:1px solid #edf2ee}.trustItem:last-child{border-right:0}.icon{font-size:32px;color:#18b957}.trustItem p{margin:5px 0 0;color:#607482;font-size:13px}
 
-section{padding:70px 0}
-.title{text-align:center;font-size:34px;margin:0 0 28px}
+section{padding:70px 0}.title{text-align:center;font-size:34px;margin:0 0 28px}
+.types{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}.card{background:white;border:1px solid #dcebe3;border-radius:18px;box-shadow:0 12px 32px #0001;overflow:hidden;text-align:center}.cardImg{height:145px;background-size:cover;background-position:center}.round{width:64px;height:64px;border-radius:50%;background:white;margin:-32px auto 10px;display:grid;place-items:center;border:1px solid #dcebe3;color:#18b957;font-size:26px;font-weight:900}.card h3{margin:0 0 6px}.card p{color:#607482;font-size:13px;margin:0 0 22px}
 
-.types{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
-.card{background:white;border:1px solid #dcebe3;border-radius:18px;box-shadow:0 12px 32px #0001;overflow:hidden;text-align:center}
-.cardImg{height:145px;background-size:cover;background-position:center}
+.locationsBox{background:#f0fbf5;border-radius:24px;padding:34px;display:grid;grid-template-columns:1.2fr 4fr;gap:28px}.locationsBox h2{font-size:31px;color:#0b7f3b;margin:0 0 12px}.locations{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.cityPic{height:145px;border-radius:14px;background-size:cover;background-position:center}.cityName{text-align:center;font-weight:900;margin-top:10px;font-size:13px}
 
-.locationsBox{background:#f0fbf5;border-radius:24px;padding:34px;display:grid;grid-template-columns:1.2fr 4fr;gap:28px}
-.locations{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.owner{background:#f2fbf6;border-radius:24px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:34px;align-items:center}.ownerImg{height:300px;border-radius:18px;background:url('IMG_1328.jpeg') center/cover}') center/cover}.owner h2{font-size:34px;color:#0b7f3b;margin:0 0 12px}.checks{line-height:1.9;font-weight:800}
 
-.owner{background:#f2fbf6;border-radius:24px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:34px}
-.ownerImg{height:300px;border-radius:18px;background:url('IMG_1328.jpeg') center/cover no-repeat}
+.cta{background:linear-gradient(135deg,#0b7f3b,#061b36);color:white;border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:center}.cta h2{margin:0;font-size:32px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.feature{text-align:center}.feature div{font-size:42px;color:#18b957}.feature p{color:#607482;font-size:13px}
 
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.feature{text-align:center}.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.spot{background:white;border:1px solid #dcebe3;border-radius:22px;box-shadow:0 12px 32px #0001;overflow:hidden}.spotImg{height:220px;background-size:cover;background-position:center}.spotBody{padding:22px}
-.safe{position:absolute;right:80px;bottom:90px;z-index:6;background:white;border-radius:18px;padding:14px 18px;box-shadow:0 14px 34px #0002;max-width:210px;font-size:14px}.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;align-items:center;justify-content:center;padding:20px}.modal.active{display:flex}.box{background:white;width:100%;max-width:520px;border-radius:24px;padding:26px}.box h2{margin-top:0}input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}textarea{min-height:90px}.close{background:#eee;color:#111;width:100%;margin-top:8px}
+.spots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.spot{background:white;border:1px solid #dcebe3;border-radius:22px;box-shadow:0 12px 32px #0001;overflow:hidden}.spotImg{height:220px;background-size:cover;background-position:center}.spotBody{padding:22px}
+
+.modal{display:none;position:fixed;inset:0;background:#0009;z-index:999;align-items:center;justify-content:center;padding:20px}.modal.active{display:flex}.box{background:white;width:100%;max-width:520px;border-radius:24px;padding:26px}.box h2{margin-top:0}input,select,textarea{width:100%;padding:14px;margin:7px 0;border:1px solid #dcebe3;border-radius:12px;font-size:16px}textarea{min-height:90px}.close{background:#eee;color:#111;width:100%;margin-top:8px}
 
 footer{border-top:1px solid #edf2ee;padding:26px 0;color:#607482}
 
-@media(max-width:900px){
-nav{display:none}
-.hero{min-height:620px}
-.heroContent{padding-top:120px}
-.hero h1{font-size:42px}
-.trustGrid,.types,.locations,.features,.spots{grid-template-columns:1fr}
-.locationsBox,.owner{grid-template-columns:1fr}
-}</style>
+@media(max-width:900px){nav{display:none}.hero{background:#eaf8ff}.hero:after{content:"";position:absolute;right:55px;top:120px;width:50%;height:58%;background:url('IMG_1334.jpeg') center/cover no-repeat;border-radius:22px;box-shadow:0 22px 55px rgba(0,0,0,.14)}}
+</style>
 </head><body>
 
 <header><div class="wrap nav">
@@ -69,7 +58,9 @@ nav{display:none}
     <div class="actions"><button class="btn" onclick="openForm('find')">🔍 Find Storage Near Me</button><button class="btn white" onclick="openForm('owner')">⌂ List Your Space</button></div>
     <div class="rating"><span class="stars">★★★★★</span><span>Trusted by boaters and RV owners across South Florida</span></div>
   </div>
- 
+  <div class="safe"><b>Safe & Secure</b><p>Gated, private and verified spaces.</p></div>
+</div></section>
+
 <div class="wrap trust"><div class="trustGrid">
   <div class="trustItem" onclick="info('Safe & Secure','Gated, private and verified spaces.')"><div class="icon">♢</div><div><b>Safe & Secure</b><p>Gated, private and verified spaces.</p></div></div>
   <div class="trustItem" onclick="info('Flexible Terms','Monthly rentals. Cancel anytime.')"><div class="icon">▣</div><div><b>Flexible Terms</b><p>Monthly rentals. Cancel anytime.</p></div></div>
