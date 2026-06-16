@@ -18,8 +18,10 @@ nav{display:flex;gap:32px;font-weight:800;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#18b957;color:white;border:0;border-radius:14px;padding:15px 22px;font-weight:900;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bfe8cc}
 
-.hero{position:relative;min-height:660px;background:#fff;overflow:hidden}.hero strong{color:#18b957}
-.hero p{font-size:20px;line-height:1.45;color:#18344a}
+.hero{position:relative;min-height:560px;background:linear-gradient(90deg,#fff 0%,#fff 45%,#eaf8ff 45%,#eaf8ff 100%);overflow:hidden}
+.hero:after{content:"";position:absolute;right:95px;top:95px;width:42%;height:390px;background:url('IMG_1334.jpeg') center/cover no-repeat;border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.16)}
+.heroContent{position:relative;z-index:2;max-width:610px;padding-top:120px}
+.hero h1{font-size:42px;line-height:1.12;margin:0 0 22px;font-weight:900}.hero p{font-size:20px;line-height:1.45;color:#18344a}
 .actions{display:flex;gap:16px;margin:26px 0}
 .rating{display:flex;gap:12px;align-items:center;font-size:14px;color:#405967;font-weight:800}.stars{color:#f5b400;font-size:20px}
 .safe{position:absolute;right:95px;bottom:135px;z-index:3;background:white;border-radius:18px;padding:14px 18px;box-shadow:0 14px 34px #0002;max-width:210px;font-size:14px}
