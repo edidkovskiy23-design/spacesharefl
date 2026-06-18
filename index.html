@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SpaceShareFL | Boat, Jet Ski, Trailer & RV Storage</title>
-
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -13,13 +12,11 @@ a{text-decoration:none;color:inherit}
 .wrap{max-width:1180px;margin:auto;padding:0 24px}
 .btn{background:#19bf63;color:white;border:0;border-radius:24px;padding:16px 26px;font-size:18px;font-weight:800;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bde8ce}
-
 header{position:sticky;top:0;background:white;z-index:20;border-bottom:1px solid #e9eef0}
 .nav{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{display:flex;align-items:center;gap:12px;font-size:36px;font-weight:900}
 .logo span{color:#18b957}
 .logo small{display:block;font-size:18px;color:#667085;font-weight:700}
-
 .hero{
 position:relative;
 min-height:760px;
@@ -36,7 +33,6 @@ padding:90px 0 120px;
 .heroBtns{display:flex;gap:18px;flex-wrap:wrap}
 .trust{margin-top:34px;font-size:18px;color:white}
 .stars{font-size:34px;color:#ffb000;letter-spacing:2px;margin-bottom:8px}
-
 .heroFeatures{
 position:absolute;
 left:50%;
@@ -55,18 +51,15 @@ overflow:hidden;
 .heroFeature:last-child{border-right:0}
 .heroFeature b{display:block;font-size:19px;margin-bottom:8px}
 .heroFeature p{margin:0;color:#344054;font-size:16px;line-height:1.35}
-
 .features{display:none}
-
 section{padding:105px 0 65px}
 h2{font-size:44px;line-height:1.1;margin:0 0 28px}
-
 .spots{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
 .card{border:1px solid #dce8e2;border-radius:28px;overflow:hidden;background:white;box-shadow:0 8px 25px rgba(0,0,0,.06)}
-.card img{width:100%;height:180px;object-fit:contain;display:block;background:#fff;padding:10px}.cardBody{padding:22px;text-align:center}
+.card img{width:100%;height:180px;object-fit:contain;display:block;background:#fff;padding:10px}
+.cardBody{padding:22px;text-align:center}
 .card h3{font-size:28px;margin:0 0 10px}
 .card p{font-size:18px;color:#667085;margin:0}
-
 .areas{background:#f7fbf8}
 .owner{background:#f2fbf6;border-radius:36px;padding:45px;display:grid;grid-template-columns:1fr 1.2fr;gap:45px;align-items:center}
 .owner img{width:100%;height:320px;object-fit:cover;border-radius:28px}
@@ -74,50 +67,44 @@ h2{font-size:44px;line-height:1.1;margin:0 0 28px}
 .owner p,.owner li{font-size:23px;line-height:1.35}
 .owner ul{list-style:none;padding:0;margin:22px 0}
 .owner li{margin-bottom:10px}
-
 footer{border-top:1px solid #edf2ee;padding:26px 0;color:#667085}
-
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:99;padding:24px}
 .box{background:white;max-width:520px;margin:70px auto;padding:28px;border-radius:24px}
 .box h2{font-size:30px}
 .box input,.box textarea{width:100%;padding:15px;margin:8px 0;border:1px solid #d0d5dd;border-radius:14px;font-size:16px}
 .box textarea{min-height:110px}
-
 @media(max-width:900px){
 .wrap{padding:0 18px}
 .nav{min-height:auto;padding:14px 0}
 .logo{font-size:28px}
 .logo small{font-size:14px}
 header .btn{font-size:15px;padding:13px 16px}
-
 .hero{min-height:720px;padding:70px 0 160px;background-position:center}
 .hero h1{font-size:42px}
 .hero p{font-size:19px}
 .heroBtns{display:block}
 .heroBtns .btn{width:100%;margin-bottom:14px}
 .heroFeatures{grid-template-columns:1fr;bottom:-190px;width:88%}
-heroFeature{border-right:0;border-bottom:1px solid #e5ecef}
+.heroFeature{border-right:0;border-bottom:1px solid #e5ecef}
 section{padding:220px 0 45px}
 .spots{grid-template-columns:1fr}
-.card img{height:240px}
+.card img{height:200px}
 .owner{display:block;padding:26px}
 .owner img{height:240px;margin-bottom:22px}
 .owner h2{font-size:34px}
 .owner p,.owner li{font-size:19px}
 .owner .btn{width:100%}
+.box{margin:30px auto;width:92%;padding:24px}
 }
 </style>
 </head>
-
 <body>
-
 <header>
 <div class="wrap nav">
   <div class="logo">🌊 <div>SpaceShare<span>FL</span><small>Local storage made simple.</small></div></div>
   <button class="btn" onclick="openForm('ownerModal')">⌂ List Your Space</button>
 </div>
 </header>
-
 <section class="hero">
 <div class="wrap">
   <div class="heroContent">
@@ -133,7 +120,6 @@ section{padding:220px 0 45px}
     </div>
   </div>
 </div>
-
 <div class="heroFeatures">
   <div class="heroFeature"><b>🛡 Safe & Secure</b><p>Gated facilities with verified spaces</p></div>
   <div class="heroFeature"><b>📅 Flexible Terms</b><p>Month-to-month options available</p></div>
@@ -141,7 +127,6 @@ section{padding:220px 0 45px}
   <div class="heroFeature"><b>🎧 Support You Can Trust</b><p>Friendly local support when you need it</p></div>
 </div>
 </section>
-
 <section>
 <div class="wrap">
 <h2>What can you store?</h2>
@@ -154,21 +139,19 @@ section{padding:220px 0 45px}
 </div>
 </div>
 </section>
-
 <section class="areas">
 <div class="wrap">
 <h2>Storage locations across South Florida</h2>
 <p style="font-size:24px;line-height:1.35;color:#344054">We connect you with trusted space owners in the best areas.</p>
 <div class="spots">
-  <div class="card"><img src="IMG_8720.jpeg"><div class="cardBody"><h3>Hollywood</h3><p>Boat, RV & trailer storage</p></div></div>
-  <div class="card"><img src="IMG_8721.jpeg"><div class="cardBody"><h3>Hallandale Beach</h3><p>Secure local storage</p></div></div>
-  <div class="card"><img src="IMG_8718.jpeg"><div class="cardBody"><h3>Aventura</h3><p>Premium nearby spaces</p></div></div>
-  <div class="card"><img src="IMG_8719.jpeg"><div class="cardBody"><h3>Fort Lauderdale</h3><p>Boat-friendly locations</p></div></div>
-  <div class="card"><img src="IMG_8717.jpeg"><div class="cardBody"><h3>Miami</h3><p>Flexible monthly storage</p></div></div>
+  <div class="card"><img src="IMG_8720.jpeg" alt="Hollywood"><div class="cardBody"><h3>Hollywood</h3><p>Boat, RV & trailer storage</p></div></div>
+  <div class="card"><img src="IMG_8721.jpeg" alt="Hallandale Beach"><div class="cardBody"><h3>Hallandale Beach</h3><p>Secure local storage</p></div></div>
+  <div class="card"><img src="IMG_8718.jpeg" alt="Aventura"><div class="cardBody"><h3>Aventura</h3><p>Premium nearby spaces</p></div></div>
+  <div class="card"><img src="IMG_8719.jpeg" alt="Fort Lauderdale"><div class="cardBody"><h3>Fort Lauderdale</h3><p>Boat-friendly locations</p></div></div>
+  <div class="card"><img src="IMG_8717.jpeg" alt="Miami"><div class="cardBody"><h3>Miami</h3><p>Flexible monthly storage</p></div></div>
 </div>
 </div>
 </section>
-
 <section>
 <div class="wrap owner">
 <img src="IMG_1327.jpeg" alt="Gated storage lot">
@@ -185,11 +168,9 @@ section{padding:220px 0 45px}
 </div>
 </div>
 </section>
-
 <footer>
 <div class="wrap">© 2026 SpaceShareFL</div>
 </footer>
-
 <div class="modal" id="findModal">
 <div class="box">
 <h2>Find Storage</h2>
@@ -203,25 +184,29 @@ section{padding:220px 0 45px}
 </form>
 </div>
 </div>
-
 <div class="modal" id="ownerModal">
 <div class="box">
 <h2>List Your Space</h2>
 <form action="https://formspree.io/f/xdavwkjp" method="POST">
 <input name="name" placeholder="Your name" required>
+<input name="email" placeholder="Email address" required>
 <input name="phone" placeholder="Phone number" required>
 <input name="city" placeholder="City / Area" required>
-<textarea name="space" placeholder="Describe your space"></textarea>
+<input name="space_type" placeholder="Space type: Boat, RV, Trailer, Jet Ski" required>
+<input name="price" placeholder="Monthly price, example: $149/mo" required>
+<textarea name="space" placeholder="Describe your space: gated, covered, driveway, yard, access hours"></textarea>
 <button class="btn" type="submit">Submit Space</button>
 <button class="btn white" type="button" onclick="closeForms()">Close</button>
 </form>
 </div>
 </div>
-
 <script>
-function openForm(id){document.getElementById(id).style.display='block'}
-function closeForms(){document.querySelectorAll('.modal').forEach(m=>m.style.display='none')}
+function openForm(id){
+document.getElementById(id).style.display='block'
+}
+function closeForms(){
+document.querySelectorAll('.modal').forEach(m=>m.style.display='none')
+}
 </script>
-
 </body>
 </html>
