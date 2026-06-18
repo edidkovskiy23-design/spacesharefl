@@ -21,21 +21,44 @@ header{position:sticky;top:0;background:white;z-index:20;border-bottom:1px solid
 .logo small{display:block;font-size:18px;color:#667085;font-weight:700}
 
 .hero{
+position:relative;
+min-height:760px;
+background:
+linear-gradient(90deg,rgba(3,20,45,.88) 0%,rgba(3,20,45,.72) 38%,rgba(3,20,45,.18) 67%,rgba(3,20,45,.02) 100%),
+url("IMG_1334.jpeg") center/cover no-repeat;
+display:flex;
+align-items:center;
+padding:90px 0 120px;
+}
+.heroContent{max-width:620px;color:white}
+.hero h1{font-size:64px;line-height:1.05;margin:0 0 24px;font-weight:900}
+.hero p{font-size:24px;line-height:1.4;margin:0 0 30px;color:white}
+.heroBtns{display:flex;gap:18px;flex-wrap:wrap}
+.trust{margin-top:34px;font-size:18px;color:white}
+.stars{font-size:34px;color:#ffb000;letter-spacing:2px;margin-bottom:8px}
+
+.heroFeatures{
+position:absolute;
+left:50%;
+bottom:-62px;
+transform:translateX(-50%);
+width:min(1120px,88%);
 background:white;
-padding:40px 0 80px;
-}.heroGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:center}.hero h1{font-size:56px;line-height:1.05;margin:0 0 20px}.hero p{font-size:24px;line-height:1.4;margin:0 0 28px;color:#344054}
+border-radius:28px;
+box-shadow:0 25px 60px rgba(0,0,0,.22);
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:0;
+overflow:hidden;
+}
+.heroFeature{padding:26px 30px;border-right:1px solid #e5ecef}
+.heroFeature:last-child{border-right:0}
+.heroFeature b{display:block;font-size:19px;margin-bottom:8px}
+.heroFeature p{margin:0;color:#344054;font-size:16px;line-height:1.35}
 
-.heroImg img{
-.heroImg img{
-width:100%;
-height:620px;
-object-fit:cover;
-border-radius:40px;
-box-shadow:0 40px 80px rgba(0,0,0,.25);
-}.feature h3{font-size:24px;margin:10px 0}
-.feature p{font-size:18px;color:#344054;line-height:1.4}
+.features{display:none}
 
-section{padding:65px 0}
+section{padding:105px 0 65px}
 h2{font-size:44px;line-height:1.1;margin:0 0 28px}
 
 .spots{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
@@ -46,10 +69,6 @@ h2{font-size:44px;line-height:1.1;margin:0 0 28px}
 .card p{font-size:18px;color:#667085;margin:0}
 
 .areas{background:#f7fbf8}
-.areaGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:25px}
-.areaCard{background:white;border:1px solid #dce8e2;border-radius:22px;padding:22px;font-size:21px;font-weight:800;box-shadow:0 8px 22px rgba(0,0,0,.04)}
-.areaCard small{display:block;margin-top:8px;font-size:15px;color:#667085;font-weight:600}
-
 .owner{background:#f2fbf6;border-radius:36px;padding:45px;display:grid;grid-template-columns:1fr 1.2fr;gap:45px;align-items:center}
 .owner img{width:100%;height:320px;object-fit:cover;border-radius:28px}
 .owner h2{font-size:46px;margin:0 0 18px}
@@ -67,40 +86,26 @@ footer{border-top:1px solid #edf2ee;padding:26px 0;color:#667085}
 
 @media(max-width:900px){
 .wrap{padding:0 18px}
-.nav{min-height:auto;padding:14px 0;gap:10px}
-.logo{font-size:28px;gap:8px}
+.nav{min-height:auto;padding:14px 0}
+.logo{font-size:28px}
 .logo small{font-size:14px}
-header .btn{font-size:15px;padding:13px 16px;border-radius:22px;max-width:140px}
+header .btn{font-size:15px;padding:13px 16px}
 
-.hero{padding:42px 0}
-.heroGrid{grid-template-columns:1fr;gap:24px}
-.hero h1{font-size:38px;line-height:1.08}
+.hero{min-height:720px;padding:70px 0 160px;background-position:center}
+.hero h1{font-size:42px}
 .hero p{font-size:19px}
 .heroBtns{display:block}
 .heroBtns .btn{width:100%;margin-bottom:14px}
-.heroImg img{height:260px;border-radius:28px}
-
-.trust{display:block;font-size:20px}
-.stars{font-size:38px;margin-bottom:10px}
-
-.features{grid-template-columns:1fr;padding:35px 0}
-.spots{grid-template-columns:1fr;gap:26px}
+.heroFeatures{grid-template-columns:1fr;bottom:-190px;width:88%}
+heroFeature{border-right:0;border-bottom:1px solid #e5ecef}
+section{padding:220px 0 45px}
+.spots{grid-template-columns:1fr}
 .card img{height:240px}
-
-.areaGrid{grid-template-columns:1fr;gap:14px}
-.areaCard{font-size:22px;padding:24px}
-
-section{padding:45px 0}
-h2{font-size:36px}
-
-.owner{display:block;padding:26px;border-radius:28px}
+.owner{display:block;padding:26px}
 .owner img{height:240px;margin-bottom:22px}
 .owner h2{font-size:34px}
 .owner p,.owner li{font-size:19px}
 .owner .btn{width:100%}
-
-.box{margin:30px auto;width:92%;padding:24px}
-.box h2{font-size:28px}
 }
 </style>
 </head>
@@ -115,36 +120,35 @@ h2{font-size:36px}
 </header>
 
 <section class="hero">
-<div class="wrap heroGrid">
-  <div>
+<div class="wrap">
+  <div class="heroContent">
     <h1>Find the perfect storage for your boat, jet ski, trailer or RV.</h1>
     <p>Secure local storage across South Florida. Simple, fast and close to home.</p>
     <div class="heroBtns">
       <button class="btn" onclick="openForm('findModal')">🔍 Find Storage Near Me</button>
       <button class="btn white" onclick="openForm('ownerModal')">⌂ List Your Space</button>
     </div>
-    <div class="trust"><div class="stars">★★★★★</div><div>Trusted by boaters and RV owners across South Florida</div></div>
+    <div class="trust">
+      <div class="stars">★★★★★</div>
+      Trusted by boaters and RV owners across South Florida
+    </div>
   </div>
-  <div class="heroImg">
-    <img src="IMG_1334.jpeg" alt="Secure South Florida storage for boats and RVs">
-  </div>
+</div>
+
+<div class="heroFeatures">
+  <div class="heroFeature"><b>🛡 Safe & Secure</b><p>Gated facilities with verified spaces</p></div>
+  <div class="heroFeature"><b>📅 Flexible Terms</b><p>Month-to-month options available</p></div>
+  <div class="heroFeature"><b>📍 Local & Convenient</b><p>Storage locations near you</p></div>
+  <div class="heroFeature"><b>🎧 Support You Can Trust</b><p>Friendly local support when you need it</p></div>
 </div>
 </section>
-
-<div class="wrap">
-<div class="features">
-  <div class="feature"><div>◇</div><h3>Safe & Secure</h3><p>Gated, private and verified spaces.</p></div>
-  <div class="feature"><div>▣</div><h3>Flexible Terms</h3><p>Monthly rentals. Cancel anytime.</p></div>
-  <div class="feature"><div>⊕</div><h3>Local & Convenient</h3><p>Across Hollywood, Aventura, Miami & more.</p></div>
-  <div class="feature"><div>☎</div><h3>Support You Can Trust</h3><p>Real people here to help.</p></div>
-</div>
-</div>
 
 <section>
 <div class="wrap">
 <h2>What can you store?</h2>
 <div class="spots">
-  <div class="card"><img src="B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png" alt="Boat storage"><div class="cardBody"><h3>Boats</h3><p>All sizes welcome</p></div></div>  <div class="card"><img src="IMG_1324.jpeg" alt="Jet ski storage"><div class="cardBody"><h3>Jet Skis</h3><p>Single or multiple</p></div></div>
+  <div class="card"><img src="B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png" alt="Boat storage"><div class="cardBody"><h3>Boats</h3><p>All sizes welcome</p></div></div>
+  <div class="card"><img src="IMG_1324.jpeg" alt="Jet ski storage"><div class="cardBody"><h3>Jet Skis</h3><p>Single or multiple</p></div></div>
   <div class="card"><img src="IMG_1325.jpeg" alt="Trailer storage"><div class="cardBody"><h3>Trailers</h3><p>Utility, cargo & more</p></div></div>
   <div class="card"><img src="IMG_1326.jpeg" alt="RV storage"><div class="cardBody"><h3>RVs</h3><p>Motorhomes & campers</p></div></div>
   <div class="card"><img src="IMG_1327.jpeg" alt="Extra vehicle storage"><div class="cardBody"><h3>Extra Space</h3><p>Cars, trucks & more</p></div></div>
@@ -157,48 +161,13 @@ h2{font-size:36px}
 <h2>Storage locations across South Florida</h2>
 <p style="font-size:24px;line-height:1.35;color:#344054">We connect you with trusted space owners in the best areas.</p>
 <div class="spots">
-
-<div class="card">
-<img src="IMG_8720.jpeg" alt="Hollywood">
-<div class="cardBody">
-<h3>Hollywood</h3>
-<p>Boat, RV & trailer storage</p>
+  <div class="card"><img src="IMG_8720.jpeg"><div class="cardBody"><h3>Hollywood</h3><p>Boat, RV & trailer storage</p></div></div>
+  <div class="card"><img src="IMG_8721.jpeg"><div class="cardBody"><h3>Hallandale Beach</h3><p>Secure local storage</p></div></div>
+  <div class="card"><img src="IMG_8718.jpeg"><div class="cardBody"><h3>Aventura</h3><p>Premium nearby spaces</p></div></div>
+  <div class="card"><img src="IMG_8719.jpeg"><div class="cardBody"><h3>Fort Lauderdale</h3><p>Boat-friendly locations</p></div></div>
+  <div class="card"><img src="IMG_8717.jpeg"><div class="cardBody"><h3>Miami</h3><p>Flexible monthly storage</p></div></div>
 </div>
 </div>
-
-<div class="card">
-<img src="IMG_8721.jpeg" alt="Hallandale Beach">
-<div class="cardBody">
-<h3>Hallandale Beach</h3>
-<p>Secure local storage</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8718.jpeg" alt="Aventura">
-<div class="cardBody">
-<h3>Aventura</h3>
-<p>Premium nearby spaces</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8719.jpeg" alt="Fort Lauderdale">
-<div class="cardBody">
-<h3>Fort Lauderdale</h3>
-<p>Boat-friendly locations</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8717.jpeg" alt="Miami">
-<div class="cardBody">
-<h3>Miami</h3>
-<p>Flexible monthly storage</p>
-</div>
-</div>
-
-</div></div>
 </section>
 
 <section>
