@@ -268,29 +268,73 @@ document.getElementById("ownerForm").addEventListener("submit", async function(e
     alert("Something went wrong. Please try again.");
   }
 });
-</script>
-
 <script>
-const map = L.map('map').setView([26.05, -80.20], 9);
+const map = L.map('map').setView([26.03,-80.16],10);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+ attribution:'© OpenStreetMap'
 }).addTo(map);
 
-L.marker([25.7617,-80.1918]).addTo(map)
-.bindPopup('<b>Miami</b><br>$150/month');
+const locations = [
+{
+name:"Miami Boat Storage",
+city:"Miami",
+price:"$150/mo",
+type:"🚤",
+coords:[25.7617,-80.1918]
+},
+{
+name:"Hollywood Jet Ski Storage",
+city:"Hollywood",
+price:"$120/mo",
+type:"🌊",
+coords:[26.0112,-80.1495]
+},
+{
+name:"Hallandale Trailer Storage",
+city:"Hallandale",
+price:"$130/mo",
+type:"🚚",
+coords:[25.9861,-80.1256]
+},
+{
+name:"Aventura RV Storage",
+city:"Aventura",
+price:"$140/mo",
+type:"🚐",
+coords:[25.9565,-80.1392]
+},
+{
+name:"Fort Lauderdale Boat Storage",
+city:"Fort Lauderdale",
+price:"$160/mo",
+type:"🚤",
+coords:[26.1224,-80.1373]
+}
+];
 
-L.marker([26.0112,-80.1495]).addTo(map)
-.bindPopup('<b>Hollywood</b><br>$120/month');
-
-L.marker([25.9861,-80.1256]).addTo(map)
-.bindPopup('<b>Hallandale Beach</b><br>$130/month');
-
-L.marker([25.9565,-80.1392]).addTo(map)
-.bindPopup('<b>Aventura</b><br>$140/month');
-
-L.marker([26.1224,-80.1373]).addTo(map)
-.bindPopup('<b>Fort Lauderdale</b><br>$160/month');
+locations.forEach(item=>{
+L.marker(item.coords)
+.addTo(map)
+.bindPopup(`
+<div style="min-width:200px">
+<div style="font-size:22px">${item.type}</div>
+<b>${item.name}</b><br>
+${item.city}<br>
+<b>${item.price}</b><br><br>
+<button style="
+background:#19bf63;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:10px;
+cursor:pointer;
+">
+Contact Owner
+</button>
+</div>
+`);
+});
 </script>
 </body>
 </html>   
