@@ -14,6 +14,7 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,sans-serif;color:#071f3f;background:#fff}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1180px;margin:auto;padding:0 24px}
+
 .btn{background:#19bf63;color:white;border:0;border-radius:24px;padding:16px 26px;font-size:18px;font-weight:800;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bde8ce}
 
@@ -58,7 +59,8 @@ overflow:hidden;
 .heroFeature b{display:block;font-size:19px;margin-bottom:8px}
 .heroFeature p{margin:0;color:#344054;font-size:16px;line-height:1.35}
 
-section{padding:105px 0 65px}
+section{padding:75px 0}
+.afterHero{padding-top:120px}
 h2{font-size:44px;line-height:1.1;margin:0 0 28px}
 .sectionText{font-size:24px;line-height:1.35;color:#344054;margin-top:0}
 
@@ -71,7 +73,24 @@ h2{font-size:44px;line-height:1.1;margin:0 0 28px}
 
 .areas{background:#f7fbf8}
 
-.mapSection{background:linear-gradient(180deg,#f8fafc,#ffffff);padding:75px 0}
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin-top:30px;
+}
+.statBox{
+background:white;
+border:1px solid #e5ecef;
+border-radius:24px;
+padding:24px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+.statBox b{font-size:34px;color:#19bf63}
+.statBox p{margin:6px 0 0;color:#667085;font-size:16px;font-weight:700}
+
+.mapSection{background:linear-gradient(180deg,#f8fafc,#ffffff);padding:80px 0}
 .mapHead{text-align:center;margin-bottom:24px}
 .mapHead h2{font-size:40px;margin-bottom:10px}
 .mapHead p{font-size:18px;color:#64748b;margin:0}
@@ -79,13 +98,14 @@ h2{font-size:44px;line-height:1.1;margin:0 0 28px}
 .mapControls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
 .mapBtn{border:1px solid #d9e7df;background:#fff;color:#0b3b25;border-radius:999px;padding:11px 16px;font-weight:800;cursor:pointer}
 .mapBtn:hover{background:#19bf63;color:white}
-#map{height:420px;border-radius:22px;overflow:hidden}
+#map{height:430px;border-radius:22px;overflow:hidden}
+
 .customMarker{
 background:white;
 border:3px solid #19bf63;
 border-radius:50%;
-width:42px;
-height:42px;
+width:44px;
+height:44px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -121,11 +141,13 @@ header .btn{font-size:14px;padding:12px 14px}
 .heroBtns .btn{width:100%;margin-bottom:14px}
 .heroFeatures{grid-template-columns:1fr;bottom:-190px;width:88%}
 .heroFeature{border-right:0;border-bottom:1px solid #e5ecef}
-section{padding:220px 0 45px}
+.afterHero{padding-top:230px}
+section{padding:55px 0}
+h2{font-size:34px}
+.sectionText{font-size:19px}
 .spots{grid-template-columns:1fr}
 .card img{height:200px}
-.mapSection{padding:55px 0}
-.mapHead h2{font-size:32px}
+.stats{grid-template-columns:1fr 1fr}
 #map{height:360px}
 .owner{display:block;padding:26px}
 .owner img{height:240px;margin-bottom:22px}
@@ -170,7 +192,7 @@ section{padding:220px 0 45px}
 </div>
 </section>
 
-<section>
+<section class="afterHero">
 <div class="wrap">
 <h2>What can you store?</h2>
 <div class="spots">
@@ -193,6 +215,13 @@ section{padding:220px 0 45px}
   <div class="card"><img src="IMG_8718.jpeg" alt="Aventura"><div class="cardBody"><h3>Aventura</h3><p>Premium nearby spaces</p></div></div>
   <div class="card"><img src="IMG_8719.jpeg" alt="Fort Lauderdale"><div class="cardBody"><h3>Fort Lauderdale</h3><p>Boat-friendly locations</p></div></div>
   <div class="card"><img src="IMG_8717.jpeg" alt="Miami"><div class="cardBody"><h3>Miami</h3><p>Flexible monthly storage</p></div></div>
+</div>
+
+<div class="stats">
+  <div class="statBox"><b>127</b><p>Storage Spots</p></div>
+  <div class="statBox"><b>43</b><p>Boat Spaces</p></div>
+  <div class="statBox"><b>29</b><p>RV Spaces</p></div>
+  <div class="statBox"><b>18</b><p>Jet Ski Spaces</p></div>
 </div>
 </div>
 </section>
@@ -284,8 +313,8 @@ section{padding:220px 0 45px}
 <form action="https://formspree.io/f/xdavwkjp" method="POST">
 <input name="name" placeholder="Your name" required>
 <input name="phone" placeholder="Phone number" required>
-<input name="city" placeholder="City" required>
-<textarea name="message" placeholder="What do you need to store?"></textarea>
+<input name="city" id="requestCity" placeholder="City" required>
+<textarea name="message" id="requestMessage" placeholder="What do you need to store?"></textarea>
 <button class="btn" type="submit">Send Request</button>
 <button class="btn white" type="button" onclick="closeForms()">Close</button>
 </form>
@@ -319,6 +348,12 @@ function openForm(id){
 
 function closeForms(){
   document.querySelectorAll(".modal").forEach(m => m.style.display = "none");
+}
+
+function openContact(title, city, price){
+  document.getElementById("requestCity").value = city;
+  document.getElementById("requestMessage").value = "I am interested in: " + title + " — " + price;
+  openForm("findModal");
 }
 
 document.getElementById("ownerForm").addEventListener("submit", async function(e){
@@ -365,11 +400,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
 }).addTo(map);
 
 const locations = [
-{name:"Miami Boat Storage",city:"Miami",price:"$150/mo",kind:"Boat",icon:"🚤",coords:[25.7617,-80.1918]},
-{name:"Hollywood Jet Ski Storage",city:"Hollywood",price:"$120/mo",kind:"Jet Ski",icon:"🌊",coords:[26.0112,-80.1495]},
-{name:"Hallandale Trailer Storage",city:"Hallandale",price:"$130/mo",kind:"Trailer",icon:"🚚",coords:[25.9861,-80.1256]},
-{name:"Aventura RV Storage",city:"Aventura",price:"$140/mo",kind:"RV",icon:"🚐",coords:[25.9565,-80.1392]},
-{name:"Fort Lauderdale Boat Storage",city:"Fort Lauderdale",price:"$160/mo",kind:"Boat",icon:"🚤",coords:[26.1224,-80.1373]}
+{name:"Miami Boat Storage",city:"Miami",price:"$150/mo",kind:"Boat",icon:"🚤",image:"B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png",coords:[25.7617,-80.1918]},
+{name:"Hollywood Jet Ski Storage",city:"Hollywood",price:"$120/mo",kind:"Jet Ski",icon:"🌊",image:"IMG_1324.jpeg",coords:[26.0112,-80.1495]},
+{name:"Hallandale Trailer Storage",city:"Hallandale",price:"$130/mo",kind:"Trailer",icon:"🚚",image:"IMG_1325.jpeg",coords:[25.9861,-80.1256]},
+{name:"Aventura RV Storage",city:"Aventura",price:"$140/mo",kind:"RV",icon:"🚐",image:"IMG_1326.jpeg",coords:[25.9565,-80.1392]},
+{name:"Fort Lauderdale Boat Storage",city:"Fort Lauderdale",price:"$160/mo",kind:"Boat",icon:"🚤",image:"IMG_1327.jpeg",coords:[26.1224,-80.1373]}
 ];
 
 let markers = [];
@@ -378,20 +413,19 @@ function makeMarker(item){
   const customIcon = L.divIcon({
     html:`<div class="customMarker">${item.icon}</div>`,
     className:"",
-    iconSize:[42,42],
-    iconAnchor:[21,21]
+    iconSize:[44,44],
+    iconAnchor:[22,22]
   });
 
   const marker = L.marker(item.coords,{icon:customIcon}).addTo(map);
 
   marker.bindPopup(`
-    <div style="min-width:210px;font-family:Arial">
-      <div style="font-size:24px;margin-bottom:6px">${item.icon}</div>
-      <b style="font-size:16px">${item.name}</b><br>
-      <span>${item.city}</span><br>
-      <span>${item.kind}</span><br>
-      <b style="font-size:18px;color:#0b7f3b">${item.price}</b><br><br>
-      <button onclick="openForm('findModal')" style="
+    <div style="width:230px;font-family:Arial">
+      <img src="${item.image}" style="width:100%;height:115px;object-fit:cover;border-radius:14px;margin-bottom:10px;">
+      <b style="font-size:17px">${item.name}</b><br>
+      <span>${item.city} • ${item.kind}</span><br>
+      <b style="font-size:20px;color:#0b7f3b">${item.price}</b><br><br>
+      <button onclick="openContact('${item.name}','${item.city}','${item.price}')" style="
         background:#19bf63;
         color:white;
         border:none;
@@ -399,6 +433,7 @@ function makeMarker(item){
         border-radius:12px;
         font-weight:800;
         cursor:pointer;
+        width:100%;
       ">Contact Owner</button>
     </div>
   `);
