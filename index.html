@@ -8,18 +8,21 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<style>*{box-sizing:border-box}
+<style>
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,sans-serif;color:#071f3f;background:#fff}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1180px;margin:auto;padding:0 24px}
 .btn{background:#19bf63;color:white;border:0;border-radius:24px;padding:16px 26px;font-size:18px;font-weight:800;cursor:pointer}
 .btn.white{background:white;color:#0b7f3b;border:1px solid #bde8ce}
-header{position:sticky;top:0;background:white;z-index:20;border-bottom:1px solid #e9eef0}
+
+header{position:sticky;top:0;background:white;z-index:50;border-bottom:1px solid #e9eef0}
 .nav{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{display:flex;align-items:center;gap:12px;font-size:36px;font-weight:900}
 .logo span{color:#18b957}
 .logo small{display:block;font-size:18px;color:#667085;font-weight:700}
+
 .hero{
 position:relative;
 min-height:760px;
@@ -36,6 +39,7 @@ padding:90px 0 120px;
 .heroBtns{display:flex;gap:18px;flex-wrap:wrap}
 .trust{margin-top:34px;font-size:18px;color:white}
 .stars{font-size:34px;color:#ffb000;letter-spacing:2px;margin-bottom:8px}
+
 .heroFeatures{
 position:absolute;
 left:50%;
@@ -47,43 +51,71 @@ border-radius:28px;
 box-shadow:0 25px 60px rgba(0,0,0,.22);
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:0;
 overflow:hidden;
 }
 .heroFeature{padding:26px 30px;border-right:1px solid #e5ecef}
 .heroFeature:last-child{border-right:0}
 .heroFeature b{display:block;font-size:19px;margin-bottom:8px}
 .heroFeature p{margin:0;color:#344054;font-size:16px;line-height:1.35}
-.features{display:none}
+
 section{padding:105px 0 65px}
 h2{font-size:44px;line-height:1.1;margin:0 0 28px}
+.sectionText{font-size:24px;line-height:1.35;color:#344054;margin-top:0}
+
 .spots{display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
 .card{border:1px solid #dce8e2;border-radius:28px;overflow:hidden;background:white;box-shadow:0 8px 25px rgba(0,0,0,.06)}
 .card img{width:100%;height:180px;object-fit:contain;display:block;background:#fff;padding:10px}
 .cardBody{padding:22px;text-align:center}
-.card h3{font-size:28px;margin:0 0 10px}
+.card h3{font-size:26px;margin:0 0 10px}
 .card p{font-size:18px;color:#667085;margin:0}
+
 .areas{background:#f7fbf8}
+
+.mapSection{background:linear-gradient(180deg,#f8fafc,#ffffff);padding:75px 0}
+.mapHead{text-align:center;margin-bottom:24px}
+.mapHead h2{font-size:40px;margin-bottom:10px}
+.mapHead p{font-size:18px;color:#64748b;margin:0}
+.mapCard{background:white;padding:16px;border-radius:30px;box-shadow:0 22px 55px rgba(15,23,42,.16);border:1px solid #e5e7eb}
+.mapControls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
+.mapBtn{border:1px solid #d9e7df;background:#fff;color:#0b3b25;border-radius:999px;padding:11px 16px;font-weight:800;cursor:pointer}
+.mapBtn:hover{background:#19bf63;color:white}
+#map{height:420px;border-radius:22px;overflow:hidden}
+.customMarker{
+background:white;
+border:3px solid #19bf63;
+border-radius:50%;
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:21px;
+box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+
 .owner{background:#f2fbf6;border-radius:36px;padding:45px;display:grid;grid-template-columns:1fr 1.2fr;gap:45px;align-items:center}
 .owner img{width:100%;height:320px;object-fit:cover;border-radius:28px}
 .owner h2{font-size:46px;margin:0 0 18px}
 .owner p,.owner li{font-size:23px;line-height:1.35}
 .owner ul{list-style:none;padding:0;margin:22px 0}
 .owner li{margin-bottom:10px}
+
 footer{border-top:1px solid #edf2ee;padding:26px 0;color:#667085}
+
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:99;padding:24px}
 .box{background:white;max-width:520px;margin:70px auto;padding:28px;border-radius:24px}
 .box h2{font-size:30px}
 .box input,.box textarea{width:100%;padding:15px;margin:8px 0;border:1px solid #d0d5dd;border-radius:14px;font-size:16px}
 .box textarea{min-height:110px}
+
 @media(max-width:900px){
 .wrap{padding:0 18px}
-.nav{min-height:auto;padding:14px 0}
-.logo{font-size:28px}
+.nav{padding:14px 0;min-height:auto}
+.logo{font-size:26px}
 .logo small{font-size:14px}
-header .btn{font-size:15px;padding:13px 16px}
-.hero{min-height:720px;padding:70px 0 160px;background-position:center}
-.hero h1{font-size:42px}
+header .btn{font-size:14px;padding:12px 14px}
+.hero{min-height:720px;padding:70px 0 170px;background-position:center}
+.hero h1{font-size:40px}
 .hero p{font-size:19px}
 .heroBtns{display:block}
 .heroBtns .btn{width:100%;margin-bottom:14px}
@@ -92,6 +124,9 @@ header .btn{font-size:15px;padding:13px 16px}
 section{padding:220px 0 45px}
 .spots{grid-template-columns:1fr}
 .card img{height:200px}
+.mapSection{padding:55px 0}
+.mapHead h2{font-size:32px}
+#map{height:360px}
 .owner{display:block;padding:26px}
 .owner img{height:240px;margin-bottom:22px}
 .owner h2{font-size:34px}
@@ -101,13 +136,16 @@ section{padding:220px 0 45px}
 }
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="wrap nav">
   <div class="logo">🌊 <div>SpaceShare<span>FL</span><small>Local storage made simple.</small></div></div>
   <button class="btn" onclick="openForm('ownerModal')">⌂ List Your Space</button>
 </div>
 </header>
+
 <section class="hero">
 <div class="wrap">
   <div class="heroContent">
@@ -123,6 +161,7 @@ section{padding:220px 0 45px}
     </div>
   </div>
 </div>
+
 <div class="heroFeatures">
   <div class="heroFeature"><b>🛡 Safe & Secure</b><p>Gated facilities with verified spaces</p></div>
   <div class="heroFeature"><b>📅 Flexible Terms</b><p>Month-to-month options available</p></div>
@@ -130,23 +169,24 @@ section{padding:220px 0 45px}
   <div class="heroFeature"><b>🎧 Support You Can Trust</b><p>Friendly local support when you need it</p></div>
 </div>
 </section>
-<section style="padding:70px 0;background:#f8fafc;">
+
+<section>
 <div class="wrap">
-<h2 style="text-align:center;font-size:42px;margin-bottom:15px;">
-Find Storage Near You
-</h2>
-
-<p style="text-align:center;color:#64748b;margin-bottom:30px;">
-Browse available storage locations across South Florida
-</p>
-
-<div id="map" style="height:600px;border-radius:20px;overflow:hidden;"></div>
+<h2>What can you store?</h2>
+<div class="spots">
+  <div class="card"><img src="B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png" alt="Boat storage"><div class="cardBody"><h3>Boats</h3><p>Secure boat storage</p></div></div>
+  <div class="card"><img src="IMG_1324.jpeg" alt="Jet ski storage"><div class="cardBody"><h3>Jet Skis</h3><p>Easy local access</p></div></div>
+  <div class="card"><img src="IMG_1325.jpeg" alt="Trailer storage"><div class="cardBody"><h3>Trailers</h3><p>Driveway & lot spaces</p></div></div>
+  <div class="card"><img src="IMG_1326.jpeg" alt="RV storage"><div class="cardBody"><h3>RVs</h3><p>Monthly RV parking</p></div></div>
+  <div class="card"><img src="IMG_1327.jpeg" alt="Extra vehicle storage"><div class="cardBody"><h3>Extra Space</h3><p>Flexible storage options</p></div></div>
+</div>
 </div>
 </section>
+
 <section class="areas">
 <div class="wrap">
 <h2>Storage locations across South Florida</h2>
-<p style="font-size:24px;line-height:1.35;color:#344054">We connect you with trusted space owners in the best areas.</p>
+<p class="sectionText">We connect you with trusted space owners in the best areas.</p>
 <div class="spots">
   <div class="card"><img src="IMG_8720.jpeg" alt="Hollywood"><div class="cardBody"><h3>Hollywood</h3><p>Boat, RV & trailer storage</p></div></div>
   <div class="card"><img src="IMG_8721.jpeg" alt="Hallandale Beach"><div class="cardBody"><h3>Hallandale Beach</h3><p>Secure local storage</p></div></div>
@@ -156,21 +196,68 @@ Browse available storage locations across South Florida
 </div>
 </div>
 </section>
+
 <section>
 <div class="wrap">
 <h2>Featured Storage Spots</h2>
-<p style="font-size:24px;line-height:1.35;color:#344054">Verified spaces from local owners.</p>
-
-<div class="spots" id="featuredListings" style="grid-template-columns:repeat(3,1fr);">  <div class="card">
+<p class="sectionText">Verified spaces from local owners.</p>
+<div class="spots" style="grid-template-columns:repeat(3,1fr);">
+  <div class="card">
     <img src="IMG_1327.jpeg" alt="Storage spot">
     <div class="cardBody">
       <h3>Gated Boat Storage</h3>
       <p>Hollywood • $149/mo</p>
     </div>
   </div>
+  <div class="card">
+    <img src="IMG_1326.jpeg" alt="RV storage">
+    <div class="cardBody">
+      <h3>Private RV Space</h3>
+      <p>Aventura • $179/mo</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="IMG_1325.jpeg" alt="Trailer storage">
+    <div class="cardBody">
+      <h3>Trailer Parking</h3>
+      <p>Hallandale • $129/mo</p>
+    </div>
+  </div>
 </div>
 </div>
-</section>section>
+</section>
+
+<section class="mapSection">
+<div class="wrap">
+<div class="mapHead">
+<h2>Find Storage Near You</h2>
+<p>Explore trusted storage spots across South Florida</p>
+</div>
+
+<div class="mapCard">
+<div class="mapControls">
+<button class="mapBtn" onclick="flyToCity('all')">All</button>
+<button class="mapBtn" onclick="flyToCity('Miami')">Miami</button>
+<button class="mapBtn" onclick="flyToCity('Hollywood')">Hollywood</button>
+<button class="mapBtn" onclick="flyToCity('Hallandale')">Hallandale</button>
+<button class="mapBtn" onclick="flyToCity('Aventura')">Aventura</button>
+<button class="mapBtn" onclick="flyToCity('Fort Lauderdale')">Fort Lauderdale</button>
+</div>
+
+<div class="mapControls">
+<button class="mapBtn" onclick="filterType('all')">All Types</button>
+<button class="mapBtn" onclick="filterType('Boat')">🚤 Boat</button>
+<button class="mapBtn" onclick="filterType('Jet Ski')">🌊 Jet Ski</button>
+<button class="mapBtn" onclick="filterType('RV')">🚐 RV</button>
+<button class="mapBtn" onclick="filterType('Trailer')">🚚 Trailer</button>
+</div>
+
+<div id="map"></div>
+</div>
+</div>
+</section>
+
+<section>
 <div class="wrap owner">
 <img src="IMG_1327.jpeg" alt="Gated storage lot">
 <div>
@@ -186,9 +273,11 @@ Browse available storage locations across South Florida
 </div>
 </div>
 </section>
+
 <footer>
 <div class="wrap">© 2026 SpaceShareFL</div>
 </footer>
+
 <div class="modal" id="findModal">
 <div class="box">
 <h2>Find Storage</h2>
@@ -202,10 +291,10 @@ Browse available storage locations across South Florida
 </form>
 </div>
 </div>
- <div class="modal" id="ownerModal">
+
+<div class="modal" id="ownerModal">
 <div class="box">
 <h2>List Your Space</h2>
-
 <form id="ownerForm" action="https://formspree.io/f/xdavwkjp" method="POST">
 <input name="name" placeholder="Your name" required>
 <input name="email" placeholder="Email address" required>
@@ -214,11 +303,9 @@ Browse available storage locations across South Florida
 <input name="space_type" placeholder="Space type: Boat, RV, Trailer, Jet Ski" required>
 <input name="price" placeholder="Monthly price, example: $149/mo" required>
 <textarea name="space" placeholder="Describe your space: gated, covered, driveway, yard, access hours"></textarea>
-
 <button class="btn" type="submit">Submit Space</button>
 <button class="btn white" type="button" onclick="closeForms()">Close</button>
 </form>
-
 </div>
 </div>
 
@@ -268,6 +355,8 @@ document.getElementById("ownerForm").addEventListener("submit", async function(e
     alert("Something went wrong. Please try again.");
   }
 });
+</script>
+
 <script>
 const map = L.map('map').setView([26.03,-80.16],10);
 
@@ -276,66 +365,70 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
 }).addTo(map);
 
 const locations = [
-{
-name:"Miami Boat Storage",
-city:"Miami",
-price:"$150/mo",
-type:"🚤",
-coords:[25.7617,-80.1918]
-},
-{
-name:"Hollywood Jet Ski Storage",
-city:"Hollywood",
-price:"$120/mo",
-type:"🌊",
-coords:[26.0112,-80.1495]
-},
-{
-name:"Hallandale Trailer Storage",
-city:"Hallandale",
-price:"$130/mo",
-type:"🚚",
-coords:[25.9861,-80.1256]
-},
-{
-name:"Aventura RV Storage",
-city:"Aventura",
-price:"$140/mo",
-type:"🚐",
-coords:[25.9565,-80.1392]
-},
-{
-name:"Fort Lauderdale Boat Storage",
-city:"Fort Lauderdale",
-price:"$160/mo",
-type:"🚤",
-coords:[26.1224,-80.1373]
-}
+{name:"Miami Boat Storage",city:"Miami",price:"$150/mo",kind:"Boat",icon:"🚤",coords:[25.7617,-80.1918]},
+{name:"Hollywood Jet Ski Storage",city:"Hollywood",price:"$120/mo",kind:"Jet Ski",icon:"🌊",coords:[26.0112,-80.1495]},
+{name:"Hallandale Trailer Storage",city:"Hallandale",price:"$130/mo",kind:"Trailer",icon:"🚚",coords:[25.9861,-80.1256]},
+{name:"Aventura RV Storage",city:"Aventura",price:"$140/mo",kind:"RV",icon:"🚐",coords:[25.9565,-80.1392]},
+{name:"Fort Lauderdale Boat Storage",city:"Fort Lauderdale",price:"$160/mo",kind:"Boat",icon:"🚤",coords:[26.1224,-80.1373]}
 ];
 
-locations.forEach(item=>{
-L.marker(item.coords)
-.addTo(map)
-.bindPopup(`
-<div style="min-width:200px">
-<div style="font-size:22px">${item.type}</div>
-<b>${item.name}</b><br>
-${item.city}<br>
-<b>${item.price}</b><br><br>
-<button style="
-background:#19bf63;
-color:white;
-border:none;
-padding:8px 14px;
-border-radius:10px;
-cursor:pointer;
-">
-Contact Owner
-</button>
-</div>
-`);
-});
+let markers = [];
+
+function makeMarker(item){
+  const customIcon = L.divIcon({
+    html:`<div class="customMarker">${item.icon}</div>`,
+    className:"",
+    iconSize:[42,42],
+    iconAnchor:[21,21]
+  });
+
+  const marker = L.marker(item.coords,{icon:customIcon}).addTo(map);
+
+  marker.bindPopup(`
+    <div style="min-width:210px;font-family:Arial">
+      <div style="font-size:24px;margin-bottom:6px">${item.icon}</div>
+      <b style="font-size:16px">${item.name}</b><br>
+      <span>${item.city}</span><br>
+      <span>${item.kind}</span><br>
+      <b style="font-size:18px;color:#0b7f3b">${item.price}</b><br><br>
+      <button onclick="openForm('findModal')" style="
+        background:#19bf63;
+        color:white;
+        border:none;
+        padding:10px 15px;
+        border-radius:12px;
+        font-weight:800;
+        cursor:pointer;
+      ">Contact Owner</button>
+    </div>
+  `);
+
+  markers.push({marker,item});
+}
+
+locations.forEach(makeMarker);
+
+function flyToCity(city){
+  if(city === "all"){
+    map.setView([26.03,-80.16],10);
+    return;
+  }
+
+  const found = locations.find(x => x.city === city);
+  if(found){
+    map.setView(found.coords,13);
+  }
+}
+
+function filterType(type){
+  markers.forEach(obj => map.removeLayer(obj.marker));
+  markers = [];
+
+  locations
+    .filter(item => type === "all" || item.kind === type)
+    .forEach(makeMarker);
+}
 </script>
+
 </body>
-</html>   
-   
+</html>
