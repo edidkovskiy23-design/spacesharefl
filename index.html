@@ -1059,7 +1059,7 @@ try {
 const newListing = newListings[0]; 
     if(newListing && newListing.id){
 
-    alert("Calling AI moderation for listing: " + newListing.id);
+   
 
     await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
         method: "POST",
@@ -1072,16 +1072,16 @@ const newListing = newListings[0];
         })
     });
 
-    alert("AI moderation request sent");
-}    alert("Your listing was submitted and is under AI review.");
-    form.reset();
-    closeForms();
+   }
 
-  }catch(error){
-    alert("Your request was sent. If something went wrong, please try again.");
-    form.reset();
-    closeForms();
-  }
+alert("Thank you! Your listing has been submitted and is under review.");
+form.reset();
+closeForms();
+
+}catch(error){
+  alert("Thank you! Your listing has been submitted and is under review.");
+  form.reset();
+  closeForms();
 });
 
 renderListings();
