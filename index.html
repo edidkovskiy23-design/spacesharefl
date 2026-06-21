@@ -101,6 +101,21 @@ background:white;border:1px solid #e5ecef;border-radius:26px;padding:26px;box-sh
 .howBox h3,.guideBox h3{font-size:24px;margin:0 0 10px}
 .howBox p,.faqItem p,.review p,.guideBox p{color:#667085;font-size:16px;line-height:1.45;margin:0}
 
+.reviewsHead{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:25px;
+}
+.review small{
+display:block;
+margin-top:10px;
+color:#0b7f3b;
+font-weight:900;
+}
+
 .calc{background:#071f3f;color:white;border-radius:36px;padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
 .calc h2{color:white}
 .calc p{color:#d0d5dd;font-size:19px}
@@ -128,7 +143,6 @@ background:white;border:1px solid #e5ecef;border-radius:26px;padding:26px;box-sh
 
 .waitlist{background:#f8fafc;border:1px solid #e5e7eb;border-radius:32px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 
-/* Professional Footer */
 .footer{
 background:#071f3f;
 color:white;
@@ -250,6 +264,8 @@ h2{font-size:32px}
 .owner .btn{width:100%}
 .waitlist{display:block}
 .waitlist .btn{width:100%;margin-top:14px}
+.reviewsHead{display:block}
+.reviewsHead .btn{width:100%;margin-top:15px}
 .footerGrid{grid-template-columns:1fr}
 .footer{padding:44px 0 24px}
 .box{margin:25px auto;width:94%;padding:22px}
@@ -271,6 +287,7 @@ body{padding-bottom:72px}
     <a href="#listings">Listings</a>
     <a href="#mapSection">Map</a>
     <a href="#how">How it works</a>
+    <a href="#reviews">Reviews</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
@@ -448,14 +465,40 @@ body{padding-bottom:72px}
 </div>
 </section>
 
-<section>
+<section id="reviews">
 <div class="wrap">
-<h2>What local users say</h2>
-<div class="grid3">
-  <div class="review"><div class="stars">★★★★★</div><p>“Found a secure place for my boat within a day. Much easier than calling storage lots one by one.”</p><br><b>Michael R. — Hollywood, FL</b></div>
-  <div class="review"><div class="stars">★★★★★</div><p>“We needed RV parking for a few months and found the perfect spot. Safe, affordable, and convenient.”</p><br><b>Sarah K. — Fort Lauderdale, FL</b></div>
-  <div class="review"><div class="stars">★★★★★</div><p>“Finally found a place for my jet ski close to home. The process was simple and fast.”</p><br><b>David P. — Aventura, FL</b></div>
+
+<div class="reviewsHead">
+  <div>
+    <h2 style="margin-bottom:8px">What local users say</h2>
+    <p class="sectionText" style="margin:0">Feedback from local boat, RV, trailer and jet ski owners.</p>
+  </div>
+  <button class="btn" onclick="openForm('reviewModal')">⭐ Leave a Review</button>
 </div>
+
+<div class="grid3">
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>“Found a secure place for my boat within a day. Much easier than calling storage lots one by one.”</p>
+    <br><b>Michael R. — Hollywood, FL</b>
+    <small>Boat Storage</small>
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>“We needed RV parking for a few months and found the perfect spot. Safe, affordable, and convenient.”</p>
+    <br><b>Sarah K. — Fort Lauderdale, FL</b>
+    <small>RV Parking</small>
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <p>“Finally found a place for my jet ski close to home. The process was simple and fast.”</p>
+    <br><b>David P. — Aventura, FL</b>
+    <small>Jet Ski Storage</small>
+  </div>
+</div>
+
 </div>
 </section>
 
@@ -496,6 +539,7 @@ body{padding-bottom:72px}
       <a href="#contact">Contact Us</a>
       <a href="#privacy">Privacy Policy</a>
       <a href="#terms">Terms of Service</a>
+      <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
     </div>
   </div>
@@ -510,12 +554,12 @@ body{padding-bottom:72px}
 
 <div class="wrap legalBlock" id="privacy">
   <h3>Privacy Policy</h3>
-  <p>SpaceShareFL respects your privacy. Information submitted through our website may be used to respond to inquiries, storage requests, listing submissions, waitlist requests and customer support. We do not sell your personal information. Some information may be shared only when needed to help connect renters with storage space providers.</p>
+  <p>SpaceShareFL respects your privacy. Information submitted through our website may be used to respond to inquiries, storage requests, listing submissions, waitlist requests, reviews and customer support. We do not sell your personal information. Some information may be shared only when needed to help connect renters with storage space providers.</p>
 </div>
 
 <div class="wrap legalBlock" id="terms">
   <h3>Terms of Service</h3>
-  <p>SpaceShareFL provides a platform that connects people looking for storage with local storage space owners. Listings, pricing, availability, access rules and rental arrangements must be confirmed by the parties involved. Users are responsible for verifying listing details, access, insurance needs and storage conditions before making any agreement.</p>
+  <p>SpaceShareFL provides a platform that connects people looking for storage with local storage space owners. Listings, pricing, availability, access rules and rental arrangements must be confirmed by the parties involved. Reviews submitted through the website are reviewed before publishing. Users are responsible for verifying listing details, access, insurance needs and storage conditions before making any agreement.</p>
 </div>
 
 <div class="footerBottom">
@@ -534,6 +578,7 @@ body{padding-bottom:72px}
 <h2>Find Storage</h2>
 <p style="color:#667085">Tell us what you need and we’ll help find nearby options.</p>
 <form action="https://formspree.io/f/xdavwkjp" method="POST">
+<input type="hidden" name="form_type" value="Find Storage Request">
 <input name="name" placeholder="Your name" required>
 <input name="email" placeholder="Email address">
 <input name="phone" placeholder="Phone number" required>
@@ -559,6 +604,7 @@ body{padding-bottom:72px}
 <h2>List Your Space</h2>
 <p style="color:#667085">Your listing will be submitted for review first.</p>
 <form id="ownerForm" action="https://formspree.io/f/xdavwkjp" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="form_type" value="Owner Listing Submission">
 <input name="name" placeholder="Your name" required>
 <input name="email" placeholder="Email address" required>
 <input name="phone" placeholder="Phone number" required>
@@ -583,11 +629,46 @@ body{padding-bottom:72px}
 </div>
 </div>
 
+<div class="modal" id="reviewModal">
+<div class="box">
+<button class="closeX" onclick="closeForms()">×</button>
+<h2>Leave a Review</h2>
+<p style="color:#667085">Share your experience with SpaceShareFL. Reviews are reviewed before being published.</p>
+
+<form action="https://formspree.io/f/xdavwkjp" method="POST">
+<input type="hidden" name="form_type" value="Customer Review">
+<input name="review_name" placeholder="Your name" required>
+<input name="review_email" placeholder="Email address">
+<input name="review_city" placeholder="City, example: Hollywood, FL">
+<select name="rating" required>
+<option value="">Rating</option>
+<option>★★★★★</option>
+<option>★★★★☆</option>
+<option>★★★☆☆</option>
+<option>★★☆☆☆</option>
+<option>★☆☆☆☆</option>
+</select>
+<select name="review_type">
+<option value="">Storage type</option>
+<option>Boat Storage</option>
+<option>Jet Ski Storage</option>
+<option>RV Parking</option>
+<option>Trailer Storage</option>
+<option>Listed My Space</option>
+</select>
+<textarea name="review_message" placeholder="Write your review..." required></textarea>
+<button class="btn" type="submit">Submit Review</button>
+<button class="btn white" type="button" onclick="closeForms()">Close</button>
+</form>
+</div>
+</div>
+
 <div class="modal" id="waitlistModal">
 <div class="box">
 <button class="closeX" onclick="closeForms()">×</button>
 <h2>Join Waitlist</h2>
 <form action="https://formspree.io/f/xdavwkjp" method="POST">
+<input type="hidden" name="form_type" value="Waitlist Request">
 <input name="name" placeholder="Your name" required>
 <input name="email" placeholder="Email address" required>
 <input name="phone" placeholder="Phone number">
@@ -701,7 +782,7 @@ document.getElementById("ownerForm").addEventListener("submit", async function(e
   };
 
   try{
-    const res=await fetch(SUPABASE_URL+"/rest/v1/listings",{
+    await fetch(SUPABASE_URL+"/rest/v1/listings",{
       method:"POST",
       headers:{
         "apikey":SUPABASE_KEY,
