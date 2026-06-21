@@ -1058,19 +1058,22 @@ try {
 
 const newListing = newListings[0]; 
     if(newListing && newListing.id){
-      await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
+
+    alert("Calling AI moderation for listing: " + newListing.id);
+
+    await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer " + SUPABASE_KEY,
-          "Content-Type": "application/json"
+            "Authorization": "Bearer " + SUPABASE_KEY,
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          listing_id: newListing.id
+            listing_id: newListing.id
         })
-      });
-    }
+    });
 
-    alert("Your listing was submitted and is under AI review.");
+    alert("AI moderation request sent");
+}    alert("Your listing was submitted and is under AI review.");
     form.reset();
     closeForms();
 
