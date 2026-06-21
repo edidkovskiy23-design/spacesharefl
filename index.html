@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SpaceShareFL | Boat, Jet Ski, Trailer & RV Storage</title>
+
 <meta name="description" content="Find secure boat, jet ski, trailer and RV storage across South Florida. List your space or find local storage near Miami, Hollywood, Hallandale, Aventura and Fort Lauderdale.">
 <meta name="keywords" content="boat storage Florida, jet ski storage Miami, RV storage Hollywood FL, trailer parking South Florida, storage near me">
 
@@ -40,22 +42,32 @@ display:flex;
 align-items:center;
 padding:90px 0 125px;
 }
+
 .heroContent{max-width:660px;color:white}
 .hero h1{font-size:62px;line-height:1.05;margin:0 0 22px;font-weight:900}
 .hero p{font-size:23px;line-height:1.4;margin:0 0 28px;color:white}
 
 .searchBox{background:white;border-radius:26px;padding:12px;display:flex;gap:8px;margin:26px 0 18px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
 .searchBox input,.searchBox select{border:1px solid #d0d5dd;border-radius:18px;padding:15px;font-size:16px;flex:1}
+
 .heroBtns{display:flex;gap:14px;flex-wrap:wrap}
 .trust{margin-top:26px;font-size:17px;color:white}
 .stars{font-size:30px;color:#ffb000;letter-spacing:2px;margin-bottom:6px}
 
 .heroFeatures{
-position:absolute;left:50%;bottom:-62px;transform:translateX(-50%);
-width:min(1120px,88%);background:white;border-radius:28px;
+position:absolute;
+left:50%;
+bottom:-62px;
+transform:translateX(-50%);
+width:min(1120px,88%);
+background:white;
+border-radius:28px;
 box-shadow:0 25px 60px rgba(0,0,0,.22);
-display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden
+display:grid;
+grid-template-columns:repeat(4,1fr);
+overflow:hidden;
 }
+
 .heroFeature{padding:25px 28px;border-right:1px solid #e5ecef}
 .heroFeature:last-child{border-right:0}
 .heroFeature b{display:block;font-size:18px;margin-bottom:8px}
@@ -78,6 +90,7 @@ h2{font-size:42px;line-height:1.1;margin:0 0 20px}
 .center{text-align:center}
 .card h3{font-size:24px;margin:0 0 8px}
 .card p{font-size:16px;color:#667085;margin:0 0 12px;line-height:1.35}
+
 .badges{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
 .badge{background:#eafaf1;color:#0b7f3b;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900}
 .price{font-size:24px;font-weight:900;color:#0b7f3b;margin:10px 0}
@@ -91,8 +104,13 @@ h2{font-size:42px;line-height:1.1;margin:0 0 20px}
 .statBox p{margin:6px 0 0;color:#667085;font-size:16px;font-weight:800}
 
 .howBox,.faqItem,.review,.guideBox{
-background:white;border:1px solid #e5ecef;border-radius:26px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.05)
+background:white;
+border:1px solid #e5ecef;
+border-radius:26px;
+padding:26px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
 }
+
 .howBox b{font-size:42px;display:block;margin-bottom:12px}
 .howBox h3,.guideBox h3{font-size:24px;margin:0 0 10px}
 .howBox p,.faqItem p,.review p,.guideBox p{color:#667085;font-size:16px;line-height:1.45;margin:0}
@@ -201,8 +219,7 @@ body{padding-bottom:72px}
 </style>
 </head>
 <body>
-
-<header>
+ <header>
 <div class="wrap nav">
   <div class="logo">🌊 <div>SpaceShare<span>FL</span><small>Local storage made simple.</small></div></div>
 
@@ -225,17 +242,11 @@ body{padding-bottom:72px}
 <section class="hero">
 <div class="wrap">
   <div class="heroContent">
-
     <h1>Find secure storage for your boat, jet ski, trailer or RV.</h1>
-
-    <p>
-      Local storage across South Florida.
-      Search nearby spaces or list your own space for extra monthly income.
-    </p>
+    <p>Local storage across South Florida. Search nearby spaces or list your own space for extra monthly income.</p>
 
     <div class="searchBox">
       <input id="heroCity" placeholder="Enter city or ZIP code">
-
       <select id="heroType">
         <option value="">Storage type</option>
         <option>Boat</option>
@@ -243,211 +254,85 @@ body{padding-bottom:72px}
         <option>RV</option>
         <option>Trailer</option>
       </select>
-
       <button class="btn" onclick="heroSearch()">Search</button>
     </div>
 
     <div class="heroBtns">
-      <button class="btn" onclick="openForm('findModal')">
-        🔍 Find Storage Near Me
-      </button>
-
-      <button class="btn white" onclick="openForm('ownerModal')">
-        ⌂ List Your Space
-      </button>
+      <button class="btn" onclick="openForm('findModal')">🔍 Find Storage Near Me</button>
+      <button class="btn white" onclick="openForm('ownerModal')">⌂ List Your Space</button>
     </div>
 
     <div class="trust">
       <div class="stars">★★★★★</div>
       Trusted by boaters, RV owners and local hosts across South Florida
     </div>
-
   </div>
 </div>
 
 <div class="heroFeatures">
-
-  <div class="heroFeature">
-    <b>🛡 Reviewed Listings</b>
-    <p>Every space request is reviewed before approval.</p>
-  </div>
-
-  <div class="heroFeature">
-    <b>📅 Flexible Terms</b>
-    <p>Month-to-month options for storage needs.</p>
-  </div>
-
-  <div class="heroFeature">
-    <b>📍 Local & Convenient</b>
-    <p>Find nearby spaces in South Florida cities.</p>
-  </div>
-
-  <div class="heroFeature">
-    <b>💬 Fast Requests</b>
-    <p>Send one request and we connect you with options.</p>
-  </div>
-
+  <div class="heroFeature"><b>🛡 AI Reviewed Listings</b><p>Every submitted space is reviewed before approval.</p></div>
+  <div class="heroFeature"><b>📅 Flexible Terms</b><p>Month-to-month options for storage needs.</p></div>
+  <div class="heroFeature"><b>📍 Local & Convenient</b><p>Find nearby spaces in South Florida cities.</p></div>
+  <div class="heroFeature"><b>💬 Fast Requests</b><p>Send one request and we connect you with options.</p></div>
 </div>
 </section>
 
 <section class="afterHero">
 <div class="wrap">
-
 <h2>What can you store?</h2>
-
-<p class="sectionText">
-Built for Florida owners who need simple storage for vehicles,
-boats and outdoor equipment.
-</p>
+<p class="sectionText">Built for Florida owners who need simple storage for vehicles, boats and outdoor equipment.</p>
 
 <div class="grid5">
-
-<div class="card storeType">
-<img src="B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png">
-<div class="cardBody center">
-<h3>Boats</h3>
-<p>Secure boat storage</p>
-</div>
-</div>
-
-<div class="card storeType">
-<img src="IMG_1324.jpeg">
-<div class="cardBody center">
-<h3>Jet Skis</h3>
-<p>Easy local access</p>
-</div>
-</div>
-
-<div class="card storeType">
-<img src="IMG_1325.jpeg">
-<div class="cardBody center">
-<h3>Trailers</h3>
-<p>Driveway & lot spaces</p>
-</div>
-</div>
-
-<div class="card storeType">
-<img src="IMG_1326.jpeg">
-<div class="cardBody center">
-<h3>RVs</h3>
-<p>Monthly RV parking</p>
-</div>
-</div>
-
-<div class="card storeType">
-<img src="IMG_1327.jpeg">
-<div class="cardBody center">
-<h3>Extra Space</h3>
-<p>Flexible storage options</p>
-</div>
-</div>
-
+  <div class="card storeType"><img src="B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png"><div class="cardBody center"><h3>Boats</h3><p>Secure boat storage</p></div></div>
+  <div class="card storeType"><img src="IMG_1324.jpeg"><div class="cardBody center"><h3>Jet Skis</h3><p>Easy local access</p></div></div>
+  <div class="card storeType"><img src="IMG_1325.jpeg"><div class="cardBody center"><h3>Trailers</h3><p>Driveway & lot spaces</p></div></div>
+  <div class="card storeType"><img src="IMG_1326.jpeg"><div class="cardBody center"><h3>RVs</h3><p>Monthly RV parking</p></div></div>
+  <div class="card storeType"><img src="IMG_1327.jpeg"><div class="cardBody center"><h3>Extra Space</h3><p>Flexible storage options</p></div></div>
 </div>
 </div>
 </section>
 
 <section class="areas">
 <div class="wrap">
-
 <h2>Storage locations across South Florida</h2>
-
-<p class="sectionText">
-Start with the cities where demand is strongest.
-</p>
+<p class="sectionText">Start with the cities where demand is strongest.</p>
 
 <div class="grid5">
-
-<div class="card">
-<img src="IMG_8720.jpeg">
-<div class="cardBody center">
-<h3>Hollywood</h3>
-<p>Boat, RV & trailer storage</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8721.jpeg">
-<div class="cardBody center">
-<h3>Hallandale Beach</h3>
-<p>Secure local storage</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8718.jpeg">
-<div class="cardBody center">
-<h3>Aventura</h3>
-<p>Premium nearby spaces</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8719.jpeg">
-<div class="cardBody center">
-<h3>Fort Lauderdale</h3>
-<p>Boat-friendly locations</p>
-</div>
-</div>
-
-<div class="card">
-<img src="IMG_8717.jpeg">
-<div class="cardBody center">
-<h3>Miami</h3>
-<p>Flexible monthly storage</p>
-</div>
-</div>
-
+  <div class="card"><img src="IMG_8720.jpeg"><div class="cardBody center"><h3>Hollywood</h3><p>Boat, RV & trailer storage</p></div></div>
+  <div class="card"><img src="IMG_8721.jpeg"><div class="cardBody center"><h3>Hallandale Beach</h3><p>Secure local storage</p></div></div>
+  <div class="card"><img src="IMG_8718.jpeg"><div class="cardBody center"><h3>Aventura</h3><p>Premium nearby spaces</p></div></div>
+  <div class="card"><img src="IMG_8719.jpeg"><div class="cardBody center"><h3>Fort Lauderdale</h3><p>Boat-friendly locations</p></div></div>
+  <div class="card"><img src="IMG_8717.jpeg"><div class="cardBody center"><h3>Miami</h3><p>Flexible monthly storage</p></div></div>
 </div>
 
 <div class="stats">
-<div class="statBox"><b>127</b><p>Storage Requests</p></div>
-<div class="statBox"><b>5</b><p>Florida Cities</p></div>
-<div class="statBox"><b>24/7</b><p>Request Access</p></div>
-<div class="statBox"><b>100%</b><p>Local Focus</p></div>
+  <div class="statBox"><b>127</b><p>Storage Requests</p></div>
+  <div class="statBox"><b>5</b><p>Florida Cities</p></div>
+  <div class="statBox"><b>24/7</b><p>Request Access</p></div>
+  <div class="statBox"><b>100%</b><p>Local Focus</p></div>
 </div>
-
 </div>
 </section>
 
 <section id="listings">
 <div class="wrap">
 <h2>Featured Storage Spots</h2>
-<p class="sectionText">
-Admin-ready listing cards. Later we can add real locations here fast.
-</p>
+<p class="sectionText">Live approved listings from SpaceShareFL. New spaces appear here after AI review.</p>
 <div id="listingGrid" class="grid3"></div>
 </div>
 </section>
 
 <section id="how" class="areas">
 <div class="wrap">
-
 <h2>How it works</h2>
-
 <div class="grid3">
-
-<div class="howBox">
-<b>1</b>
-<h3>Search nearby storage</h3>
-<p>Choose your city and what you need to store.</p>
+  <div class="howBox"><b>1</b><h3>Search nearby storage</h3><p>Choose your city and what you need to store.</p></div>
+  <div class="howBox"><b>2</b><h3>Send a request</h3><p>Tell us what you need and we connect you.</p></div>
+  <div class="howBox"><b>3</b><h3>Store safely</h3><p>Confirm access, rules and price with the host.</p></div>
 </div>
-
-<div class="howBox">
-<b>2</b>
-<h3>Send a request</h3>
-<p>Tell us what you need and we connect you.</p>
-</div>
-
-<div class="howBox">
-<b>3</b>
-<h3>Store safely</h3>
-<p>Confirm access, rules and price with the host.</p>
-</div>
-
-</div>
-
 </div>
 </section>
+
 <section>
 <div class="wrap calc">
   <div>
@@ -464,33 +349,31 @@ Admin-ready listing cards. Later we can add real locations here fast.
     <p style="margin-top:10px;color:#667085">Estimated at $150 per space/month.</p>
   </div>
 </div>
-</section>
-
-<section>
+</section> 
+  <section>
 <div class="wrap">
 <h2>Size guide</h2>
+
 <div class="grid4">
+  <div class="guideBox">
+    <h3>Jet Ski</h3>
+    <p>Small driveway, side yard, garage or paved pad.</p>
+  </div>
 
-<div class="guideBox">
-<h3>Jet Ski</h3>
-<p>Small driveway, side yard, garage or paved pad.</p>
-</div>
+  <div class="guideBox">
+    <h3>20 ft Boat</h3>
+    <p>Driveway, gated outdoor lot or trailer-friendly yard.</p>
+  </div>
 
-<div class="guideBox">
-<h3>20 ft Boat</h3>
-<p>Driveway, gated outdoor lot or trailer-friendly yard.</p>
-</div>
+  <div class="guideBox">
+    <h3>Trailer</h3>
+    <p>Flat parking space with easy entry and exit.</p>
+  </div>
 
-<div class="guideBox">
-<h3>Trailer</h3>
-<p>Flat parking space with easy entry and exit.</p>
-</div>
-
-<div class="guideBox">
-<h3>RV</h3>
-<p>Larger driveway, outdoor lot or commercial-style space.</p>
-</div>
-
+  <div class="guideBox">
+    <h3>RV</h3>
+    <p>Larger driveway, outdoor lot or commercial-style space.</p>
+  </div>
 </div>
 </div>
 </section>
@@ -540,7 +423,7 @@ Admin-ready listing cards. Later we can add real locations here fast.
 <li>✓ Free to submit your space</li>
 <li>✓ Set your own monthly price</li>
 <li>✓ Add gate, camera and access details</li>
-<li>✓ Every listing is reviewed before approval</li>
+<li>✓ AI reviews listings before approval</li>
 </ul>
 
 <button class="btn" onclick="openForm('ownerModal')">⌂ List Your Space</button>
@@ -608,7 +491,7 @@ Admin-ready listing cards. Later we can add real locations here fast.
 
 <div class="faqItem">
 <h3>Can I list my own space?</h3>
-<p>Yes. Submit your space details, photos, price and access rules. We review it before publishing.</p>
+<p>Yes. Submit your space details, price and access rules. AI reviews it before publishing.</p>
 </div>
 
 <div class="faqItem">
@@ -676,7 +559,7 @@ SpaceShareFL respects your privacy. Information submitted through our website ma
 <div class="wrap legalBlock" id="terms">
 <h3>Terms of Service</h3>
 <p>
-SpaceShareFL provides a platform that connects people looking for storage with local storage space owners. Listings, pricing, availability, access rules and rental arrangements must be confirmed by the parties involved. Reviews submitted through the website are reviewed before publishing. Users are responsible for verifying listing details, access, insurance needs and storage conditions before making any agreement.
+SpaceShareFL provides a platform that connects people looking for storage with local storage space owners. Listings, pricing, availability, access rules and rental arrangements must be confirmed by the parties involved. Users are responsible for verifying listing details, access, insurance needs and storage conditions before making any agreement.
 </p>
 </div>
 
@@ -724,7 +607,7 @@ SpaceShareFL provides a platform that connects people looking for storage with l
 <div class="box">
 <button class="closeX" onclick="closeForms()">×</button>
 <h2>List Your Space</h2>
-<p style="color:#667085">Your listing will be submitted for review first.</p>
+<p style="color:#667085">Your listing will be submitted for AI review first.</p>
 
 <form id="ownerForm" action="https://formspree.io/f/xdavwkjp" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="form_type" value="Owner Listing Submission">
@@ -757,75 +640,9 @@ SpaceShareFL provides a platform that connects people looking for storage with l
 </form>
 </div>
 </div>
-
-<div class="modal" id="reviewModal">
-<div class="box">
-<button class="closeX" onclick="closeForms()">×</button>
-<h2>Leave a Review</h2>
-<p style="color:#667085">Share your experience with SpaceShareFL. Reviews are reviewed before being published.</p>
-
-<form action="https://formspree.io/f/xdavwkjp" method="POST">
-<input type="hidden" name="form_type" value="Customer Review">
-<input name="review_name" placeholder="Your name" required>
-<input name="review_email" placeholder="Email address">
-<input name="review_city" placeholder="City, example: Hollywood, FL">
-
-<select name="rating" required>
-<option value="">Rating</option>
-<option>★★★★★</option>
-<option>★★★★☆</option>
-<option>★★★☆☆</option>
-<option>★★☆☆☆</option>
-<option>★☆☆☆☆</option>
-</select>
-
-<select name="review_type">
-<option value="">Storage type</option>
-<option>Boat Storage</option>
-<option>Jet Ski Storage</option>
-<option>RV Parking</option>
-<option>Trailer Storage</option>
-<option>Listed My Space</option>
-</select>
-
-<textarea name="review_message" placeholder="Write your review..." required></textarea>
-
-<button class="btn" type="submit">Submit Review</button>
-<button class="btn white" type="button" onclick="closeForms()">Close</button>
-</form>
-</div>
-</div>
-
-<div class="modal" id="waitlistModal">
-<div class="box">
-<button class="closeX" onclick="closeForms()">×</button>
-<h2>Join Waitlist</h2>
-
-<form action="https://formspree.io/f/xdavwkjp" method="POST">
-<input type="hidden" name="form_type" value="Waitlist Request">
-<input name="name" placeholder="Your name" required>
-<input name="email" placeholder="Email address" required>
-<input name="phone" placeholder="Phone number">
-<input name="city" placeholder="Your city or ZIP code" required>
-<textarea name="message" placeholder="What do you need to store?"></textarea>
-
-<button class="btn" type="submit">Join Waitlist</button>
-<button class="btn white" type="button" onclick="closeForms()">Close</button>
-</form>
-</div>
-</div>
-
-<div class="modal" id="detailsModal">
-<div class="box large">
-<button class="closeX" onclick="closeForms()">×</button>
-<div id="detailsContent"></div>
-</div>
-</div>
-
 <script>
 const SUPABASE_URL = "https://wtpmchmzsbaupvupyxuo.supabase.co";
 const SUPABASE_KEY = "sb_publishable_VRmjMIdNtTjzvU6Fm-rpSw_T_FQlSON";
-
 const listings = [
 {
 name:"Gated Boat Storage",
@@ -838,168 +655,94 @@ coords:[26.0112,-80.1495],
 host:"Carlos",
 badges:["Gated","Verified","Easy Access"],
 desc:"Secure outdoor space for boat or trailer storage near Hollywood."
-},
-{
-name:"Private RV Space",
-city:"Aventura",
-price:"$179/mo",
-kind:"RV",
-icon:"🚐",
-image:"IMG_1326.jpeg",
-coords:[25.9565,-80.1392],
-host:"Amanda",
-badges:["Private","Wide Space","Monthly"],
-desc:"Private RV parking space with simple monthly terms."
-},
-{
-name:"Trailer Parking",
-city:"Hallandale",
-price:"$129/mo",
-kind:"Trailer",
-icon:"🚚",
-image:"IMG_1325.jpeg",
-coords:[25.9861,-80.1256],
-host:"David",
-badges:["Driveway","Local Host","Flexible"],
-desc:"Easy trailer parking near Hallandale Beach."
-},
-{
-name:"Miami Boat Storage",
-city:"Miami",
-price:"$150/mo",
-kind:"Boat",
-icon:"🚤",
-image:"B6CFB197-CC3A-4CA3-A38B-D020E971C2C5.png",
-coords:[25.7617,-80.1918],
-host:"Maria",
-badges:["Boat Friendly","Secure","Reviewed"],
-desc:"Boat-friendly storage option in Miami area."
-},
-{
-name:"Hollywood Jet Ski Storage",
-city:"Hollywood",
-price:"$120/mo",
-kind:"Jet Ski",
-icon:"🌊",
-image:"IMG_1324.jpeg",
-coords:[26.018,-80.15],
-host:"Nick",
-badges:["Small Space","Fast Access","Local"],
-desc:"Great fit for jet ski and small trailer storage."
-},
-{
-name:"Fort Lauderdale Boat Storage",
-city:"Fort Lauderdale",
-price:"$160/mo",
-kind:"Boat",
-icon:"🚤",
-image:"IMG_1327.jpeg",
-coords:[26.1224,-80.1373],
-host:"Robert",
-badges:["Gated","Boat Access","Monthly"],
-desc:"Secure boat storage near Fort Lauderdale."
 }
 ];
-
+let displayListings = listings;
 function openForm(id){
   document.getElementById(id).style.display="block";
 }
-
 function closeForms(){
   document.querySelectorAll(".modal").forEach(m=>m.style.display="none");
 }
-
 function heroSearch(){
-  const city=document.getElementById("heroCity").value;
-  const type=document.getElementById("heroType").value;
-
-  document.getElementById("requestCity").value=city;
-  document.getElementById("requestType").value=type;
-  document.getElementById("requestMessage").value="Search request from homepage.";
-
   openForm("findModal");
 }
-
 function openContact(title, city, price){
-  document.getElementById("requestCity").value=city;
-  document.getElementById("requestMessage").value="I am interested in: "+title+" — "+price;
+  document.getElementById("requestCity").value = city;
+  document.getElementById("requestMessage").value = "I am interested in: " + title + " — " + price;
   openForm("findModal");
 }
-
 function openDetails(index){
-  const item=listings[index];
-
-  document.getElementById("detailsContent").innerHTML=`
+  const item = displayListings[index];
+  document.getElementById("detailsContent").innerHTML = `
     <h2>${item.name}</h2>
-    <p style="color:#667085">${item.city} • ${item.kind} • Hosted by ${item.host}</p>
-
-    <div class="gallery">
-      <img src="${item.image}">
-      <div>
-        <img src="${item.image}">
-        <img src="${item.image}">
-      </div>
-    </div>
-
-    <div class="badges">
-      ${item.badges.map(b=>`<span class="badge">${b}</span>`).join("")}
-    </div>
-
+    <p>${item.city} • ${item.kind}</p>
     <div class="price">${item.price}</div>
-
-    <p style="font-size:18px;line-height:1.45;color:#344054">${item.desc}</p>
-
-    <p style="color:#667085">
-      <b>Note:</b> Confirm access rules, insurance, exact address and storage terms before booking.
-    </p>
-
+    <p>${item.desc}</p>
     <button class="btn" onclick="openContact('${item.name}','${item.city}','${item.price}')">
       Contact Host
     </button>
   `;
-
   openForm("detailsModal");
 }
-
+async function loadActiveListings(){
+  try{
+    const res = await fetch(
+      SUPABASE_URL + "/rest/v1/listings?select=*&status=eq.Active&verified=eq.true&order=created_at.desc",
+      {
+        headers:{
+          "apikey": SUPABASE_KEY,
+          "Authorization": "Bearer " + SUPABASE_KEY
+        }
+      }
+    );
+    const data = await res.json();
+    if(Array.isArray(data) && data.length > 0){
+      displayListings = data.map(item => ({
+        name: item.title || "Storage Space",
+        city: item.city || "South Florida",
+        price: "$" + (item.monthly_price || 150) + "/mo",
+        kind: item.space_type || "Storage",
+        icon: "🚤",
+        image: item.image_url || "IMG_1327.jpeg",
+        coords:[26.03,-80.16],
+        host: item.contact_name || "Local Host",
+        badges:["AI Reviewed","Verified"],
+        desc: item.description || "Secure storage space."
+      }));
+    }
+  }catch(error){
+    console.log(error);
+  }
+  renderListings();
+}
 function renderListings(){
-  const grid=document.getElementById("listingGrid");
-
-  grid.innerHTML=listings.slice(0,6).map((item,index)=>`
+  const grid = document.getElementById("listingGrid");
+  grid.innerHTML = displayListings.slice(0,6).map((item,index)=>`
     <div class="card">
-      <img src="${item.image}" alt="${item.name}">
-
+      <img src="${item.image}">
       <div class="cardBody">
         <h3>${item.name}</h3>
-        <p>${item.city} • ${item.kind} • Host: ${item.host}</p>
-
-        <div class="badges">
-          ${item.badges.map(b=>`<span class="badge">${b}</span>`).join("")}
-        </div>
-
+        <p>${item.city} • ${item.kind}</p>
         <div class="price">${item.price}</div>
         <p>${item.desc}</p>
-
         <div class="actions">
-          <button class="btn small white" onclick="openDetails(${index})">View Details</button>
+          <button class="btn small white" onclick="openDetails(${index})">View</button>
           <button class="btn small" onclick="openContact('${item.name}','${item.city}','${item.price}')">Contact</button>
         </div>
       </div>
     </div>
   `).join("");
 }
-
 function updateIncome(){
   const count=document.getElementById("incomeRange").value;
   document.getElementById("spaceCount").innerText=count;
   document.getElementById("incomeResult").innerText="$"+(count*150)+"/mo";
 }
-
 document.getElementById("ownerForm").addEventListener("submit", async function(e){
   e.preventDefault();
-
   const form = e.target;
   const formData = new FormData(form);
-
   try{
     await fetch(form.action,{
       method:"POST",
@@ -1007,150 +750,60 @@ document.getElementById("ownerForm").addEventListener("submit", async function(e
       headers:{"Accept":"application/json"}
     });
   }catch(error){}
-
   const listing = {
     title: form.space_type.value + " Storage",
     city: form.city.value,
     address: form.address.value,
     space_type: form.space_type.value,
     monthly_price: Number(form.price.value.replace(/[^0-9.]/g,"")),
-    description:
-      "Owner: " + form.name.value +
-      " | Email: " + form.email.value +
-      " | Phone: " + form.phone.value +
-      " | Address: " + form.address.value +
-      " | Access: " + form.access.value +
-      " | Details: " + form.space.value,
+    description: form.space.value,
     contact_name: form.name.value,
     contact_email: form.email.value,
     contact_phone: form.phone.value,
-    verified: false,
-    status: "Pending"
+    verified:false,
+    status:"Pending"
   };
-
   try{
-    const insertRes = await fetch(SUPABASE_URL + "/rest/v1/listings", {
-      method: "POST",
-      headers: {
-        "apikey": SUPABASE_KEY,
-        "Authorization": "Bearer " + SUPABASE_KEY,
-        "Content-Type": "application/json",
-        "Prefer": "return=representation"
+    const insertRes = await fetch(SUPABASE_URL + "/rest/v1/listings",{
+      method:"POST",
+      headers:{
+        "apikey":SUPABASE_KEY,
+        "Authorization":"Bearer " + SUPABASE_KEY,
+        "Content-Type":"application/json",
+        "Prefer":"return=representation"
       },
-      body: JSON.stringify(listing)
+      body:JSON.stringify(listing)
     });
-
-   const responseText = await insertRes.text();
-
-if (!insertRes.ok) {
-  alert("Insert Error: " + responseText);
-  return;
-}
-
-let newListings = [];
-
-try {
-  newListings = JSON.parse(responseText);
-} catch(e) {
-  alert("Supabase Parse Error: " + responseText);
-  return;
-}
-
-const newListing = newListings[0];
-
-if(newListing && newListing.id){
-  await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + SUPABASE_KEY,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      listing_id: newListing.id
-    })
-  });
-}
-
-alert("Thank you! Your listing has been submitted and is under review.");
-form.reset();
-closeForms();
-
-}catch(error){
-  alert("Thank you! Your listing has been submitted and is under review.");
-  form.reset();
-  closeForms();
-}          
-
+    const rows = await insertRes.json();
+    const newListing = rows[0];
+    if(newListing && newListing.id){
+      await fetch(SUPABASE_URL + "/functions/v1/moderate-listing",{
+        method:"POST",
+        headers:{
+          "Authorization":"Bearer " + SUPABASE_KEY,
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          listing_id:newListing.id
+        })
+      });
+    }
+    alert("Thank you! Your listing has been submitted and is under review.");
+    form.reset();
+    closeForms();
+    setTimeout(loadActiveListings,1500);
+  }catch(error){
+    alert("Thank you! Your listing has been submitted and is under review.");
+  }
 });
-
-renderListings();
+loadActiveListings();
 updateIncome();
 </script>
-
 <script>
 const map=L.map('map').setView([26.03,-80.16],10);
-
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-  attribution:'© OpenStreetMap'
+ attribution:'© OpenStreetMap'
 }).addTo(map);
-
-let markers=[];
-
-function makeMarker(item,index){
-  const customIcon=L.divIcon({
-    html:`<div class="customMarker">${item.icon}</div>`,
-    className:"",
-    iconSize:[44,44],
-    iconAnchor:[22,22]
-  });
-
-  const marker=L.marker(item.coords,{icon:customIcon}).addTo(map);
-
-  marker.bindPopup(`
-    <div style="width:230px;font-family:Arial">
-      <img src="${item.image}" style="width:100%;height:115px;object-fit:cover;border-radius:14px;margin-bottom:10px;">
-      <b style="font-size:17px">${item.name}</b><br>
-      <span>${item.city} • ${item.kind}</span><br>
-      <b style="font-size:20px;color:#0b7f3b">${item.price}</b><br><br>
-      <button onclick="openContact('${item.name}','${item.city}','${item.price}')" style="background:#19bf63;color:white;border:none;padding:10px 15px;border-radius:12px;font-weight:900;cursor:pointer;width:100%;">
-        Contact Owner
-      </button>
-    </div>
-  `);
-
-  markers.push({marker,item,index});
-}
-
-listings.forEach(makeMarker);
-
-function flyToCity(city){
-  if(city==="all"){
-    map.setView([26.03,-80.16],10);
-    return;
-  }
-
-  const found=listings.find(x=>x.city===city);
-
-  if(found){
-    map.setView(found.coords,13);
-  }
-}
-
-function filterType(type){
-  markers.forEach(obj=>map.removeLayer(obj.marker));
-  markers=[];
-
-  listings
-    .filter(item=>type==="all"||item.kind===type)
-    .forEach(makeMarker);
-}
-
-document.querySelectorAll(".modal").forEach(modal=>{
-  modal.addEventListener("click",function(e){
-    if(e.target===modal) closeForms();
-  });
-});
 </script>
-
 </body>
 </html>
