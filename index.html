@@ -1056,23 +1056,20 @@ try {
   return;
 }
 
-const newListing = newListings[0]; 
-    if(newListing && newListing.id){
+const newListing = newListings[0];
 
-   
-
-    await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
-        method: "POST",
-        headers: {
-            "Authorization": "Bearer " + SUPABASE_KEY,
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            listing_id: newListing.id
-        })
-    });
-
-   }
+if(newListing && newListing.id){
+  await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer " + SUPABASE_KEY,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      listing_id: newListing.id
+    })
+  });
+}
 
 alert("Thank you! Your listing has been submitted and is under review.");
 form.reset();
@@ -1082,6 +1079,8 @@ closeForms();
   alert("Thank you! Your listing has been submitted and is under review.");
   form.reset();
   closeForms();
+}          
+
 });
 
 renderListings();
