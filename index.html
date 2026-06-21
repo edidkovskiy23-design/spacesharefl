@@ -1040,9 +1040,23 @@ document.getElementById("ownerForm").addEventListener("submit", async function(e
       body: JSON.stringify(listing)
     });
 
-    const newListings = await insertRes.json();
-    const newListing = newListings[0];
+   const responseText = await insertRes.text();
 
+if (!insertRes.ok) {
+  alert("Insert Error: " + responseText);
+  return;
+}
+
+let newListings = [];
+
+try {
+  newListings = JSON.parse(responseText);
+} catch(e) {
+  alert("Supabase Parse Error: " + responseText);
+  return;
+}
+
+const newListing = newListings[0]; 
     if(newListing && newListing.id){
       await fetch(SUPABASE_URL + "/functions/v1/moderate-listing", {
         method: "POST",
